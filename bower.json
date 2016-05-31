@@ -1,0 +1,16 @@
+{
+  "name": "aakochs GitHub page",
+  "description": "",
+  "main": "",
+  "keywords": [
+    "Static",
+    "generator"
+  ],
+  "author": "",
+  "license": "",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "jQuery": "~2.2.0"
+  }
+}

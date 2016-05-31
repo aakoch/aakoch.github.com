@@ -1,0 +1,21 @@
+/* TEAM */
+
+
+Name: 
+Site: E-mail, 
+Twitter: Twitter User name
+Location: City, State
+
+
+/* THANKS */
+            
+Name: Name or URL
+
+
+
+
+/* SITE */
+Last update: YYYY/MM/DD
+Standards: HTML5, CSS3,..
+Components: Modernizr, jQuery, etc.
+Software: Used Software.
