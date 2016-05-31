@@ -1,0 +1,661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>moz-proxy issues &#124;  Adam Koch</title>
+<link rel="alternate" type="application/rss+xml" title="Adam Koch RSS Feed" href="http://www.adamkoch.com/feed/" />
+<link rel="pingback" href="http://www.adamkoch.com/xmlrpc.php" />
+
+<link rel="stylesheet" href="http://www.adamkoch.com/wp-content/themes/motion/style.css" type="text/css" media="screen" />
+<!--[if lt IE 7]>
+<link href="/ie6.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">var clear="/images/clear.gif"; //path to clear.gif</script>
+<script type="text/javascript" src="/js/unitpngfix.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Adam Koch &raquo; Feed" href="http://www.adamkoch.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Adam Koch &raquo; Comments Feed" href="http://www.adamkoch.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Adam Koch &raquo; moz-proxy issues Comments Feed" href="http://www.adamkoch.com/2012/05/04/moz-proxy-issues/feed/" />
+<script type='text/javascript' src='http://www.adamkoch.com/wp-includes/js/comment-reply.min.js?ver=3.6.1'></script>
+<script type='text/javascript' src='http://www.adamkoch.com/wp-content/themes/motion/js/sfhover.js?ver=3.6.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.adamkoch.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.adamkoch.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Spiders' href='http://www.adamkoch.com/2012/04/30/spiders/' />
+<link rel='next' title='First Scala' href='http://www.adamkoch.com/2012/08/03/first-scala/' />
+<meta name="generator" content="WordPress 3.6.1" />
+<link rel='canonical' href='http://www.adamkoch.com/2012/05/04/moz-proxy-issues/' />
+<link rel='shortlink' href='http://www.adamkoch.com/?p=2164' />
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="single single-post postid-2164 single-format-standard">
+<div id="wrapper">
+
+<div id="top">
+	<div class="menu-header-container"><ul id="menu-header" class="top_menu"><li id="menu-item-2485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2485"><a href="http://www.adamkoch.com/links/">Links</a></li>
+<li id="menu-item-2486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2486"><a href="http://www.adamkoch.com/portfolio/">Portfolio</a></li>
+<li id="menu-item-2487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2487"><a href="http://www.adamkoch.com/resume/">Resume</a></li>
+<li id="menu-item-2488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2488"><a href="http://www.adamkoch.com/about-me/">About Me</a></li>
+</ul></div>
+	<div id="search">
+	<form method="get" id="searchform" action="/">
+		<p>
+			<input type="text" value="Search this site..." onfocus="if (this.value == 'Search this site...' ) { this.value = ''; }" onblur="if (this.value == '' ) { this.value = 'Search this site...'; }" name="s" id="searchbox" />
+			<input type="submit" class="submitbutton" value="GO" />
+		</p>
+	</form>
+</div></div><!-- /top -->
+
+<div id="header">
+	<div id="logo">
+		<a href="http://www.adamkoch.com"><img src="http://www.adamkoch.com/wp-content/themes/motion/images/genericlogo.png" alt="Adam Koch" /></a>
+		<span id="site_name_header"><a href="http://www.adamkoch.com">Adam Koch</a></span>
+		<div id="desc">Software Developer and Clean Code Advocate</div>
+	</div><!-- /logo -->
+
+		<div id="headerbanner">
+		<p>Hey there! Thanks for dropping by! Take a look around and grab the <a href="http://www.adamkoch.com/feed/">RSS feed</a> to stay updated. See you around!</p>
+	</div>
+	</div>
+<!-- /header --><!-- Template Name: Single Post -->
+
+
+<div class="menu-categories-container"><ul id="menu-categories" class="primary_menu"><li id="menu-item-2489" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2489"><a href="http://www.adamkoch.com/category/personal/">Personal</a></li>
+<li id="menu-item-2490" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-2490"><a href="http://www.adamkoch.com/category/professional/">Professional</a></li>
+</ul></div>
+<div id="main">
+
+	<div id="content">
+
+		
+		
+		<div class="post-2164 post type-post status-publish format-standard hentry category-professional tag-firefox tag-linkedin tag-mozilla tag-sockets tag-websockets" id="post-2164">
+		
+
+			<div class="posttop">
+			  				  <h1 class="posttitle">moz-proxy issues</h1>								<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://www.adamkoch.com/category/professional/" title="View all posts in Professional" rel="category tag">Professional</a> by Adam &mdash; <a href="http://www.adamkoch.com/2012/05/04/moz-proxy-issues/#comments" title="Comment on moz-proxy issues">16 Comments</a></div>
+					<div class="date"><span>2012-May-04</span></div>
+				</div>
+			</div>
+
+			<div class="postcontent">
+				<p>I like <a href="http://getfirefox.com">Firefox</a>. A lot. Even <a href="http://en.wikipedia.org/wiki/History_of_Firefox">when it was named Phoenix</a>.</p>
+<p>I even use it at work (using <a title="Apps you can take anywhere" href="http://portableapps.com">PortableApps.com</a>).</p>
+<p>But some sites (ok, only <a href="http://stackexchange.com/">StackExchange</a> sites) I visit I get multiple popups asking for my user name and password. Because I&#8217;m behind a firewall I have to enter my credentials, no big deal. But they don&#8217;t work! So I have to hit Cancel. Not just once, but, like, 4 times!</p>
+<p><span id="more-2164"></span></p>
+<div id="attachment_2169" class="wp-caption alignnone" style="width: 657px"><a href="http://www.adamkoch.com/wp-content/uploads/2012/04/proxy1.png"><img class="size-full wp-image-2169" title="Annoying Proxy Authentication Popup" src="http://www.adamkoch.com/wp-content/uploads/2012/04/proxy1.png" alt="Annoying Popup" width="647" height="183" /></a><p class="wp-caption-text">Annoying Popup</p></div>
+<div id="attachment_2170" class="wp-caption alignnone" style="width: 657px"><a href="http://www.adamkoch.com/wp-content/uploads/2012/04/proxy2.png"><img class="size-full wp-image-2170" title="Annoying Proxy Authentication Popup 2" src="http://www.adamkoch.com/wp-content/uploads/2012/04/proxy2.png" alt="Annoying Popup 2" width="647" height="183" /></a><p class="wp-caption-text">Annoying Popup 2</p></div>
+<p>And it&#8217;s not the HTTP proxy, it&#8217;s asking for a &#8220;moz-proxy&#8221;.</p>
+<p>I finally decided to <a href="http://www.google.com/search?q=moz-proxy">Google my issue</a>. I found <a href="http://support.mozilla.org/en-US/questions/850627">some</a> <a href="http://support.mozilla.org/en-US/questions/814632">reports</a> of <a href="http://support.mozilla.org/en-US/questions/890084">others</a> with <a href="http://support.mozilla.org/en-US/questions/920057">the</a> <a href="http://support.mozilla.org/en-US/questions/890084">same</a> <a href="http://superuser.com/questions/398740/firefox-asks-for-proxy-details-but-only-when-accessing-facebook">issue</a>. (Ironically, the last page was from a <a href="http://stackexchange.com/">StackExchange</a> site and produced the error.)</p>
+<p>When I found <a title="Firefox Proxy.InstallTrigger bug report" href="https://bugzilla.mozilla.org/show_bug.cgi?id=701029">a page suggesting</a> it was a <a title="Firebug Proxy.InstallTrigger issue" href="http://code.google.com/p/fbug/issues/detail?id=4991">Firebug issue</a> I opened it and found a bunch of &#8220;407 Proxy Authentication Required&#8221; errors for <a href="http://sockets.ny.stockexchange.com">http://sockets.ny.stockexchange.com</a>.</p>
+<p><a href="http://www.adamkoch.com/wp-content/uploads/2012/04/firebug.png"><img class="alignnone size-large wp-image-2168" title="firebug" src="http://www.adamkoch.com/wp-content/uploads/2012/04/firebug-1024x510.png" alt="" width="640" height="318" /></a></p>
+<p>I also found these errors in the Javascript Console.</p>
+<p><a href="http://www.adamkoch.com/wp-content/uploads/2012/04/console.png"><img class="alignnone size-large wp-image-2167" title="console" src="http://www.adamkoch.com/wp-content/uploads/2012/04/console-1024x649.png" alt="" width="640" height="405" /></a></p>
+<p>When I saw the &#8220;ws&#8221; protocol I was pretty sure the issue was with <a title="Web Sockets on MDN" href="https://developer.mozilla.org/en/WebSockets">web sockets</a>.</p>
+<p>I decided to look to see if I could turn this off.</p>
+<p>Google didn&#8217;t provide any obvious <a title="Google search for turning off web sockets" href="https://www.google.com/search?q=turn+off+web+sockets+in+firefox">hits</a>, but at the bottom of <a title="Web Sockets on MDN" href="https://developer.mozilla.org/en/WebSockets">this page</a> it mentioned turning <strong>on</strong> web sockets. So I looked in &#8220;<a href="about:config">about:config</a>&#8221; and filtered on &#8220;socket&#8221;.</p>
+<p><a href="http://www.adamkoch.com/wp-content/uploads/2012/04/about-config.png"><img class="alignnone size-full wp-image-2166" title="about-config" src="http://www.adamkoch.com/wp-content/uploads/2012/04/about-config.png" alt="" width="853" height="408" /></a></p>
+<p>Sure enough, I was able to disable web sockets! Hurray! And now I don&#8217;t get those popups! Problem solved!</p>
+<p>(This <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=701029">bug</a> seems to be related.)</p>
+<p>(Maybe I can make <a href="http://www.thedreaming.org/2008/06/18/things-i-hate-about-firefox-3-and-how-to-fix-them/">this guy</a> hate Firefox a little less.)</p>
+<p><a href="http://forums.mozillazine.org/viewtopic.php?f=38&amp;t=2341325">More discussion</a> and a  <a href="http://support.mozilla.org/en-US/questions/830546">possible solution</a>.</p>
+				<div class="linkpages"></div>
+<iframe data-src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.adamkoch.com%2F2012%2F05%2F04%2Fmoz-proxy-issues%2F&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+<div class="plusoneContent" data-url="http://www.adamkoch.com/2012/05/04/moz-proxy-issues/">
+<g:plusone></g:plusone>
+</div>
+				<p>
+				<span class="alignleft">&laquo; <a href="http://www.adamkoch.com/2012/04/30/spiders/" rel="prev">Spiders</a></span>
+				<span class="alignright"><a href="http://www.adamkoch.com/2012/08/03/first-scala/" rel="next">First Scala</a> &raquo;</span>
+				</p>
+				<div class="clear"></div>
+
+			</div>
+			<small></small>
+			<small class="permalink"><a href="http://www.adamkoch.com/2012/05/04/moz-proxy-issues/" rel="bookmark" title="Permanent Link to moz-proxy issues">Permanent Link</a></small>
+
+			<div class="postmetabottom">
+				<div class="tags">Tags: <a href="http://www.adamkoch.com/tag/firefox/" rel="tag">firefox</a>, <a href="http://www.adamkoch.com/tag/linkedin/" rel="tag">linkedin</a>, <a href="http://www.adamkoch.com/tag/mozilla/" rel="tag">mozilla</a>, <a href="http://www.adamkoch.com/tag/sockets/" rel="tag">sockets</a>, <a href="http://www.adamkoch.com/tag/websockets/" rel="tag">websockets</a></div>
+				<div class="readmore"><a href='http://www.adamkoch.com/2012/05/04/moz-proxy-issues/feed/'>Comments <abbr title="Really Simple Syndication">RSS</abbr> feed</a></div>
+			</div>
+
+		</div><!-- /post -->
+
+		<div id="comments">
+		
+    <h3>16 Comments: </h3>
+  <ul class="commentlist">
+    	<li class="comment even thread-even depth-1" id="li-comment-1637">
+	<div id="comment-1637" class="comment-wrap">
+		<img alt='' src='http://0.gravatar.com/avatar/244d8d938d45c91d698672290d9f7592?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">Bwooce</div>
+						<div class="commentmetadata"><a href="#comment-1637" title="">May 27th, 2012 at 21:54</a> </div>
+			<p>Nice, thanks for this &#8212; works for me too (and I have Firebug installed&#8230;)</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1637#respond' onclick='return addComment.moveForm("comment-1637", "1637", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1664">
+	<div id="comment-1664" class="comment-wrap">
+		<img alt='' src='http://1.gravatar.com/avatar/3255def900f904a3af3918e2824ecff3?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author"><a href='http://yagni.net' rel='external nofollow' class='url'>Kramii</a></div>
+						<div class="commentmetadata"><a href="#comment-1664" title="">June 13th, 2012 at 03:36</a> </div>
+			<p>Thanks &#8211; this issue with Firefox had been driving me nuts. You&#8217;ve made my day!</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1664#respond' onclick='return addComment.moveForm("comment-1664", "1664", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1666">
+	<div id="comment-1666" class="comment-wrap">
+		<img alt='' src='http://1.gravatar.com/avatar/15dd1d7f3f308a5766058dc028366085?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">Barrie</div>
+						<div class="commentmetadata"><a href="#comment-1666" title="">June 13th, 2012 at 20:13</a> </div>
+			<p>Thanks, this is the only solution I have found so far.<br />
+<a href="https://trello.com/" rel="nofollow">https://trello.com/</a> was causing this to pop up all the time.</p>
+<p>I didn&#8217;t even know there was an error console!<br />
+But it clearly gives me the cause of the problem</p>
+<p>Error: Firefox can&#8217;t establish a connection to the server at wss://trello.com/socket.io/1/websocket/&#8230;</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1666#respond' onclick='return addComment.moveForm("comment-1666", "1666", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1728">
+	<div id="comment-1728" class="comment-wrap">
+		<img alt='' src='http://0.gravatar.com/avatar/e753169c7fbe6aad532cff0e1cf690ab?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">rahul</div>
+						<div class="commentmetadata"><a href="#comment-1728" title="">August 6th, 2012 at 01:39</a> </div>
+			<p>Thanks worked for me as well! Good trick!<br />
+It was very annoying</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1728#respond' onclick='return addComment.moveForm("comment-1728", "1728", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1743">
+	<div id="comment-1743" class="comment-wrap">
+		<img alt='' src='http://1.gravatar.com/avatar/317bafeeda69d359e34f813aff940944?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">decembre</div>
+						<div class="commentmetadata"><a href="#comment-1743" title="">August 22nd, 2012 at 06:28</a> </div>
+			<p>thanks for the help!<br />
+All is good for me too after change this value to &#8220;false&#8221;</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1743#respond' onclick='return addComment.moveForm("comment-1743", "1743", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1782">
+	<div id="comment-1782" class="comment-wrap">
+		<img alt='' src='http://0.gravatar.com/avatar/4c8a9bec5a27b66b28d3c5cddeb70e93?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">anonymous</div>
+						<div class="commentmetadata"><a href="#comment-1782" title="">September 1st, 2012 at 03:18</a> </div>
+			<p>Awesome.  Thank you.  <img src='http://www.adamkoch.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />   I dont have Firebug installed and was having this issue with an Enjin site.  fixed it right up.  <img src='http://www.adamkoch.com/wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley' /> </p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1782#respond' onclick='return addComment.moveForm("comment-1782", "1782", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1797">
+	<div id="comment-1797" class="comment-wrap">
+		<img alt='' src='http://0.gravatar.com/avatar/6d07ff19081119db615005a337f6de97?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">Mahantesh</div>
+						<div class="commentmetadata"><a href="#comment-1797" title="">September 5th, 2012 at 03:35</a> </div>
+			<p>Thanks for the Info it works like charm</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1797#respond' onclick='return addComment.moveForm("comment-1797", "1797", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1886">
+	<div id="comment-1886" class="comment-wrap">
+		<img alt='' src='http://0.gravatar.com/avatar/c9a2515315b1ee5f7dcc9ac73d5989e5?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">Kai</div>
+						<div class="commentmetadata"><a href="#comment-1886" title="">November 13th, 2012 at 04:24</a> </div>
+			<p>Thanks to your blog entry I finally got rid of that annoying dialog.</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1886#respond' onclick='return addComment.moveForm("comment-1886", "1886", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-1974">
+	<div id="comment-1974" class="comment-wrap">
+		<img alt='' src='http://0.gravatar.com/avatar/281dd26b70df2b5152c2925d536ce09e?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">Santi</div>
+						<div class="commentmetadata"><a href="#comment-1974" title="">March 5th, 2013 at 06:06</a> </div>
+			<p>This didn&#8217;t work for me, at least in the firebug console I keep getting the anoying error.</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1974#respond' onclick='return addComment.moveForm("comment-1974", "1974", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2023">
+	<div id="comment-2023" class="comment-wrap">
+		<img alt='' src='http://0.gravatar.com/avatar/06443cbd4156d5163eafa78787aef6a9?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author"><a href='http://www.con-line.org' rel='external nofollow' class='url'>Jan</a></div>
+						<div class="commentmetadata"><a href="#comment-2023" title="">April 24th, 2013 at 01:25</a> </div>
+			<p>Take this as a +1 (as g+ is blocked over here). Saves me a lot of clicking.</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2023#respond' onclick='return addComment.moveForm("comment-2023", "2023", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-2046">
+	<div id="comment-2046" class="comment-wrap">
+		<img alt='' src='http://0.gravatar.com/avatar/e3924e0f46c705f6310b68ea94797df2?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author"><a href='http://burrellramone.com' rel='external nofollow' class='url'>Ramone</a></div>
+						<div class="commentmetadata"><a href="#comment-2046" title="">May 9th, 2013 at 09:16</a> </div>
+			<p>I wasn&#8217;t having an issue with the dialog, only the persistent errors in firebug. Needless to say that the method did not work for me. Thanks anyway,  I might be able to help someone with the same issue later on.</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2046#respond' onclick='return addComment.moveForm("comment-2046", "2046", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2084">
+	<div id="comment-2084" class="comment-wrap">
+		<img alt='' src='http://1.gravatar.com/avatar/bf9c4af8c8c78712e9a09295192637a6?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">Spiderman</div>
+						<div class="commentmetadata"><a href="#comment-2084" title="">June 20th, 2013 at 05:45</a> </div>
+			<p>Unfortunately, I have set network.websocket.enabled to false in v19.0.2 and I still get the same issue.</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2084#respond' onclick='return addComment.moveForm("comment-2084", "2084", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-2088">
+	<div id="comment-2088" class="comment-wrap">
+		<img alt='' src='http://0.gravatar.com/avatar/6425e0ece730bc7eb06a12f613e3bd09?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">Rene</div>
+						<div class="commentmetadata"><a href="#comment-2088" title="">June 28th, 2013 at 08:42</a> </div>
+			<p>Not working on Firefox ESR 17</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2088#respond' onclick='return addComment.moveForm("comment-2088", "2088", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2091">
+	<div id="comment-2091" class="comment-wrap">
+		<img alt='' src='http://1.gravatar.com/avatar/f11a9296cce2fdf4f5be3265b891c54d?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">Alicia</div>
+						<div class="commentmetadata"><a href="#comment-2091" title="">July 2nd, 2013 at 02:53</a> </div>
+			<p>It worked for me until recently, I&#8217;ve been getting these popups again for a few weeks now.<br />
+If you have any other tips, I&#8217;d love to hear them.</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2091#respond' onclick='return addComment.moveForm("comment-2091", "2091", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+<ul class="children">
+	<li class="comment even depth-2" id="li-comment-2095">
+	<div id="comment-2095" class="comment-wrap">
+		<img alt='' src='http://1.gravatar.com/avatar/3926ca3ed1e306d3c549f9c08467b13c?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author">TB</div>
+						<div class="commentmetadata"><a href="#comment-2095" title="">July 7th, 2013 at 16:11</a> </div>
+			<p>Me too, then I saw this suggestion:<br />
+&#8220;I fixed this by setting<br />
+network.http.max-persistent-connections-per-proxy<br />
+to the max and adding the AutoAuth extension&#8221; from a forum</p>
+<p>I tried and it solved my problem.</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2095#respond' onclick='return addComment.moveForm("comment-2095", "2095", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment odd alt thread-even depth-1" id="li-comment-6812">
+	<div id="comment-6812" class="comment-wrap">
+		<img alt='' src='http://1.gravatar.com/avatar/11dc238b55d56d2767797430f1aa8bfc?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
+			<div class="author"><a href='http://www.operationtechnology.com' rel='external nofollow' class='url'>Operation Technology Web Design</a></div>
+						<div class="commentmetadata"><a href="#comment-6812" title="">July 31st, 2015 at 14:12</a> </div>
+			<p>This day and age, we are still getting these moz-proxy pop up boxes. The console is set to false. Any new ideas?</p>
+		</div><!-- /commentbody -->
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=6812#respond' onclick='return addComment.moveForm("comment-6812", "6812", "respond", "2164")'>Reply</a>		</div>
+	</div><!-- /comment -->
+</li><!-- #comment-## -->
+  </ul>
+  
+  <div id="navigation">
+    <div class="alignleft"></div>
+    <div class="alignright"></div>
+  </div><!-- /navigation -->
+
+  
+
+								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2012/05/04/moz-proxy-issues/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.adamkoch.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='2164' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="36e65debc8" /></p>					</form>
+							</div><!-- #respond -->
+								</div><!-- /comments -->
+
+		
+		
+		
+	</div><!-- /content -->
+
+	<div id="sidebar">
+	<ul>
+	<li id="twitter-tools" class="boxed widget aktt_widget"><h3 class="widgettitle">Recent Tweets</h3><div class="aktt_tweets">
+	<ul>
+		<li>IMG-20121007-00189.jpg <a href="http://t.co/pTHkJjwn" rel="nofollow">http://t.co/pTHkJjwn</a>  <a href="http://twitter.com/aakoch/statuses/254946925038673920" class="aktt_tweet_time">2012-10-07</a></li>
+		<li>I wrote my first Ruby program thanks to the EdgeCase Ruby Koans <a href="https://t.co/OwwzPY8C" rel="nofollow">https://t.co/OwwzPY8C</a>. <a href="http://t.co/DdMkdALm" rel="nofollow">http://t.co/DdMkdALm</a>  <a href="http://twitter.com/aakoch/statuses/254399484124086272" class="aktt_tweet_time">2012-10-06</a></li>
+		<li>These speech titles don&#039;t tell me what they are about. @<a href="http://twitter.com/BarCampOmaha" class="aktt_username">BarCampOmaha</a>  <a href="http://twitter.com/aakoch/statuses/244443484411547648" class="aktt_tweet_time">2012-09-08</a></li>
+		<li>Did you know that &quot;shaking&quot; a window in Win7 will minimize/restore the rest of the windows?  <a href="http://twitter.com/aakoch/statuses/240839139644301314" class="aktt_tweet_time">2012-08-29</a></li>
+		<li>If a method requires a String, do you &#039;Integer.toString(i)&#039; or &#039;i + &quot;&quot;&#039;? #<a href="http://search.twitter.com/search?q=%23java" class="aktt_hashtag">java</a> #dev  <a href="http://twitter.com/aakoch/statuses/240788960455049217" class="aktt_tweet_time">2012-08-29</a></li>
+		<li class="aktt_more_updates"><a href="http://twitter.com/aakoch">More updates...</a></li>
+</ul></div></li><li id="tag_cloud-2" class="boxed widget widget_tag_cloud"><h3 class="widgettitle">Tags</h3><div class="tagcloud"><a href='http://www.adamkoch.com/tag/alyssa/' class='tag-link-6' title='19 topics' style='font-size: 21.2075471698pt;'>Alyssa</a>
+<a href='http://www.adamkoch.com/tag/ant/' class='tag-link-7' title='1 topic' style='font-size: 8pt;'>ant</a>
+<a href='http://www.adamkoch.com/tag/ascii/' class='tag-link-93' title='2 topics' style='font-size: 10.3773584906pt;'>ascii</a>
+<a href='http://www.adamkoch.com/tag/bret/' class='tag-link-77' title='2 topics' style='font-size: 10.3773584906pt;'>Bret</a>
+<a href='http://www.adamkoch.com/tag/browser/' class='tag-link-120' title='2 topics' style='font-size: 10.3773584906pt;'>browser</a>
+<a href='http://www.adamkoch.com/tag/char/' class='tag-link-96' title='2 topics' style='font-size: 10.3773584906pt;'>char</a>
+<a href='http://www.adamkoch.com/tag/character/' class='tag-link-95' title='2 topics' style='font-size: 10.3773584906pt;'>character</a>
+<a href='http://www.adamkoch.com/tag/christi/' class='tag-link-10' title='22 topics' style='font-size: 22pt;'>Christi</a>
+<a href='http://www.adamkoch.com/tag/code/' class='tag-link-90' title='3 topics' style='font-size: 11.9622641509pt;'>code</a>
+<a href='http://www.adamkoch.com/tag/cpap/' class='tag-link-11' title='1 topic' style='font-size: 8pt;'>CPAP</a>
+<a href='http://www.adamkoch.com/tag/css/' class='tag-link-12' title='3 topics' style='font-size: 11.9622641509pt;'>css</a>
+<a href='http://www.adamkoch.com/tag/development/' class='tag-link-149' title='2 topics' style='font-size: 10.3773584906pt;'>development</a>
+<a href='http://www.adamkoch.com/tag/facebook/' class='tag-link-16' title='2 topics' style='font-size: 10.3773584906pt;'>facebook</a>
+<a href='http://www.adamkoch.com/tag/fitness/' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>fitness</a>
+<a href='http://www.adamkoch.com/tag/fourth/' class='tag-link-86' title='2 topics' style='font-size: 10.3773584906pt;'>Fourth</a>
+<a href='http://www.adamkoch.com/tag/health/' class='tag-link-150' title='5 topics' style='font-size: 14.3396226415pt;'>health</a>
+<a href='http://www.adamkoch.com/tag/html/' class='tag-link-22' title='3 topics' style='font-size: 11.9622641509pt;'>html</a>
+<a href='http://www.adamkoch.com/tag/java/' class='tag-link-68' title='5 topics' style='font-size: 14.3396226415pt;'>java</a>
+<a href='http://www.adamkoch.com/tag/javascript/' class='tag-link-23' title='12 topics' style='font-size: 18.6981132075pt;'>javascript</a>
+<a href='http://www.adamkoch.com/tag/joel/' class='tag-link-25' title='21 topics' style='font-size: 21.7358490566pt;'>Joel</a>
+<a href='http://www.adamkoch.com/tag/joey/' class='tag-link-26' title='7 topics' style='font-size: 15.9245283019pt;'>Joey</a>
+<a href='http://www.adamkoch.com/tag/jquery/' class='tag-link-27' title='3 topics' style='font-size: 11.9622641509pt;'>jquery</a>
+<a href='http://www.adamkoch.com/tag/jsdoc/' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>jsdoc</a>
+<a href='http://www.adamkoch.com/tag/jsdoc-toolkit/' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>jsdoc-toolkit</a>
+<a href='http://www.adamkoch.com/tag/key/' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>key</a>
+<a href='http://www.adamkoch.com/tag/keystroke/' class='tag-link-31' title='1 topic' style='font-size: 8pt;'>keystroke</a>
+<a href='http://www.adamkoch.com/tag/keystrokes/' class='tag-link-32' title='1 topic' style='font-size: 8pt;'>keystrokes</a>
+<a href='http://www.adamkoch.com/tag/lexi/' class='tag-link-70' title='7 topics' style='font-size: 15.9245283019pt;'>Lexi</a>
+<a href='http://www.adamkoch.com/tag/linkedin/' class='tag-link-176' title='5 topics' style='font-size: 14.3396226415pt;'>linkedin</a>
+<a href='http://www.adamkoch.com/tag/list/' class='tag-link-184' title='2 topics' style='font-size: 10.3773584906pt;'>list</a>
+<a href='http://www.adamkoch.com/tag/medical/' class='tag-link-161' title='2 topics' style='font-size: 10.3773584906pt;'>medical</a>
+<a href='http://www.adamkoch.com/tag/old-age/' class='tag-link-152' title='2 topics' style='font-size: 10.3773584906pt;'>old age</a>
+<a href='http://www.adamkoch.com/tag/programming/' class='tag-link-41' title='7 topics' style='font-size: 15.9245283019pt;'>programming</a>
+<a href='http://www.adamkoch.com/tag/quiz/' class='tag-link-42' title='3 topics' style='font-size: 11.9622641509pt;'>quiz</a>
+<a href='http://www.adamkoch.com/tag/rhino/' class='tag-link-43' title='1 topic' style='font-size: 8pt;'>rhino</a>
+<a href='http://www.adamkoch.com/tag/shortcut/' class='tag-link-46' title='2 topics' style='font-size: 10.3773584906pt;'>shortcut</a>
+<a href='http://www.adamkoch.com/tag/short-cut/' class='tag-link-45' title='1 topic' style='font-size: 8pt;'>short cut</a>
+<a href='http://www.adamkoch.com/tag/sleep/' class='tag-link-50' title='2 topics' style='font-size: 10.3773584906pt;'>sleep</a>
+<a href='http://www.adamkoch.com/tag/software/' class='tag-link-51' title='2 topics' style='font-size: 10.3773584906pt;'>software</a>
+<a href='http://www.adamkoch.com/tag/stroke/' class='tag-link-153' title='3 topics' style='font-size: 11.9622641509pt;'>stroke</a>
+<a href='http://www.adamkoch.com/tag/tidbit/' class='tag-link-128' title='4 topics' style='font-size: 13.2830188679pt;'>tidbit</a>
+<a href='http://www.adamkoch.com/tag/toastmasters/' class='tag-link-125' title='2 topics' style='font-size: 10.3773584906pt;'>toastmasters</a>
+<a href='http://www.adamkoch.com/tag/travel/' class='tag-link-56' title='2 topics' style='font-size: 10.3773584906pt;'>travel</a>
+<a href='http://www.adamkoch.com/tag/wedding/' class='tag-link-84' title='2 topics' style='font-size: 10.3773584906pt;'>wedding</a>
+<a href='http://www.adamkoch.com/tag/wii/' class='tag-link-60' title='2 topics' style='font-size: 10.3773584906pt;'>Wii</a></div>
+</li><li id="nav_menu-3" class="boxed widget widget_nav_menu"><h3 class="widgettitle">Pages</h3><div class="menu-pages-container"><ul id="menu-pages" class="menu"><li id="menu-item-2483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2483"><a href="http://www.adamkoch.com/cnh/">Calvin and Hobbes</a></li>
+<li id="menu-item-2492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2492"><a href="http://www.adamkoch.com/generic/">Generic or Not</a></li>
+</ul></div></li>	</ul>
+</div><!-- /sidebar -->
+</div><!-- /main -->
+
+<div id="footer">
+
+	<div class="foot1">
+		<ul>
+						<li>
+				<h3>Friends &amp; links</h3>
+				<ul>
+				<li><a href="http://today.java.net/article/2006/04/04/exception-handling-antipatterns" title="One of my favorite Java articles">Exception-Handling Antipatterns</a></li>
+<li><a href="http://www.zachleat.com/web/" rel="contact met co-worker colleague" title="Zach Leatherman, friend, co-worker and great front-end programmer">Web 3.0, 6 Bladed Razors, 7 Minute Abs</a></li>
+				</ul>
+			</li>
+					</ul>
+	</div>
+
+	<div class="foot2">
+		<ul>
+						<li>
+				<h3>Pages</h3>
+				<ul>
+				<li class="page_item page-item-565"><a href="http://www.adamkoch.com/cnh/">Calvin and Hobbes</a></li>
+<li class="page_item page-item-614"><a href="http://www.adamkoch.com/generic/">Generic or Not</a></li>
+<li class="page_item page-item-1925"><a href="http://www.adamkoch.com/links/">Links</a>
+<ul class='children'>
+	<li class="page_item page-item-1932"><a href="http://www.adamkoch.com/links/development/">Development</a></li>
+	<li class="page_item page-item-1927"><a href="http://www.adamkoch.com/links/shameless-plugs/">Shameless Plugs</a>
+	<ul class='children'>
+		<li class="page_item page-item-847"><a href="http://www.adamkoch.com/links/shameless-plugs/muy-bueno-software/">Muy Bueno Software</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="page_item page-item-1919"><a href="http://www.adamkoch.com/portfolio/">Portfolio</a>
+<ul class='children'>
+	<li class="page_item page-item-1952"><a href="http://www.adamkoch.com/portfolio/open-source-contributions/">Open Source Contributions</a></li>
+	<li class="page_item page-item-1913"><a href="http://www.adamkoch.com/portfolio/projects/">Projects</a></li>
+	<li class="page_item page-item-1943"><a href="http://www.adamkoch.com/portfolio/websites/">Websites</a></li>
+</ul>
+</li>
+<li class="page_item page-item-2260"><a href="http://www.adamkoch.com/resume/">Resume</a>
+<ul class='children'>
+	<li class="page_item page-item-2241"><a href="http://www.adamkoch.com/resume/classes/">Classes</a></li>
+	<li class="page_item page-item-2368"><a href="http://www.adamkoch.com/resume/education/">Education</a>
+	<ul class='children'>
+		<li class="page_item page-item-2370"><a href="http://www.adamkoch.com/resume/education/creighton-institute-for-information-technology-and-management/">Creighton Institute for Information Technology and Management</a></li>
+		<li class="page_item page-item-2372"><a href="http://www.adamkoch.com/resume/education/pennsylvania-state-university/">Pennsylvania State University</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-2277"><a href="http://www.adamkoch.com/resume/skills/">Skills</a></li>
+	<li class="page_item page-item-2262"><a href="http://www.adamkoch.com/resume/work-history/">Work History</a>
+	<ul class='children'>
+		<li class="page_item page-item-2234"><a href="http://www.adamkoch.com/resume/work-history/applications-developer/">Applications Developer</a>
+		<ul class='children'>
+			<li class="page_item page-item-2338"><a href="http://www.adamkoch.com/resume/work-history/applications-developer/more-applications-developer/">More Applications Developer</a></li>
+		</ul>
+</li>
+		<li class="page_item page-item-2232"><a href="http://www.adamkoch.com/resume/work-history/associate-applications-developer/">Associate Applications Developer</a>
+		<ul class='children'>
+			<li class="page_item page-item-2341"><a href="http://www.adamkoch.com/resume/work-history/associate-applications-developer/more-associate-appliations-developer/">More Associate Appliations Developer</a></li>
+		</ul>
+</li>
+		<li class="page_item page-item-2345"><a href="http://www.adamkoch.com/resume/work-history/associate-system-engineer/">Associate System Engineer</a></li>
+		<li class="page_item page-item-2351"><a href="http://www.adamkoch.com/resume/work-history/contractor/">Contractor</a></li>
+		<li class="page_item page-item-2361"><a href="http://www.adamkoch.com/resume/work-history/failure-analysist/">Failure Analysist</a></li>
+		<li class="page_item page-item-2359"><a href="http://www.adamkoch.com/resume/work-history/java-programmer/">Java Programmer</a></li>
+		<li class="page_item page-item-2349"><a href="http://www.adamkoch.com/resume/work-history/president/">President</a></li>
+		<li class="page_item page-item-2230"><a href="http://www.adamkoch.com/resume/work-history/project-engineer/">Project Engineer</a>
+		<ul class='children'>
+			<li class="page_item page-item-2334"><a href="http://www.adamkoch.com/resume/work-history/project-engineer/more-project-engineer/">More Project Engineer</a></li>
+		</ul>
+</li>
+		<li class="page_item page-item-2236"><a href="http://www.adamkoch.com/resume/work-history/senior-applications-developer/">Senior Applications Developer</a></li>
+		<li class="page_item page-item-2404"><a href="http://www.adamkoch.com/resume/work-history/senior-project-engineer/">Senior Project Engineer</a></li>
+		<li class="page_item page-item-2353"><a href="http://www.adamkoch.com/resume/work-history/system-test-engineer/">System Test Engineer</a></li>
+		<li class="page_item page-item-2355"><a href="http://www.adamkoch.com/resume/work-history/teaching-intern-for-ee-communication-systems-class/">Teaching Intern for EE Communication Systems Class</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="page_item page-item-666"><a href="http://www.adamkoch.com/about-me/">About Me</a>
+<ul class='children'>
+	<li class="page_item page-item-1907"><a href="http://www.adamkoch.com/about-me/around-the-web/">Around the Web</a></li>
+	<li class="page_item page-item-1893"><a href="http://www.adamkoch.com/about-me/clean-code/">Clean Code</a></li>
+	<li class="page_item page-item-1905"><a href="http://www.adamkoch.com/about-me/i-believe/">I believe&#8230;</a></li>
+	<li class="page_item page-item-667"><a href="http://www.adamkoch.com/about-me/wife/">Wife</a></li>
+</ul>
+</li>
+				</ul>
+			</li>
+					</ul>
+	</div>
+
+	<div class="foot3">
+		<ul>
+						<li>
+				<h3>Monthly archives</h3>
+				<ul>
+					<li><a href='http://www.adamkoch.com/2012/11/' title='November 2012'>November 2012</a></li>
+	<li><a href='http://www.adamkoch.com/2012/10/' title='October 2012'>October 2012</a></li>
+	<li><a href='http://www.adamkoch.com/2012/09/' title='September 2012'>September 2012</a></li>
+	<li><a href='http://www.adamkoch.com/2012/08/' title='August 2012'>August 2012</a></li>
+	<li><a href='http://www.adamkoch.com/2012/05/' title='May 2012'>May 2012</a></li>
+				</ul>
+			</li>
+					</ul>
+	</div>
+
+</div><!-- /footer -->
+
+<div id="credits">
+	<div id="creditsleft">Powered by <a href="http://wordpress.org/extend/themes/" rel="generator">WordPress</a> &amp; <a href="http://www.webdesigncompany.net">Web Design Company</a></div>
+	<div id="creditsright"><a href="#top">&#91; Back to top &#93;</a></div>
+</div><!-- /credits -->
+<div style="font-size:.8em">All views expressed here are of Adam Koch solely and do not represent his employer's.</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="//apis.google.com/js/plusone.js">
+  {parsetags: 'explicit'}
+</script>
+<script>
+$(function () {
+    /*
+     * Viewport - jQuery selectors for finding elements in viewport
+     *
+     * Copyright (c) 2008-2009 Mika Tuupola
+     *
+     * Licensed under the MIT license:
+     *   http://www.opensource.org/licenses/mit-license.php
+     *
+     * Project home:
+     *  http://www.appelsiini.net/projects/viewport
+     *
+     */
+    $.belowthefold = function (element, settings) {
+        var fold = $(window).height() + $(window).scrollTop();
+        return fold <= $(element).offset().top - settings.threshold;
+    };
+
+    $.abovethetop = function (element, settings) {
+        var top = $(window).scrollTop();
+        return top >= $(element).offset().top + $(element).height() - settings.threshold;
+    };
+
+    $.rightofscreen = function (element, settings) {
+        var fold = $(window).width() + $(window).scrollLeft();
+        return fold <= $(element).offset().left - settings.threshold;
+    };
+
+    $.leftofscreen = function (element, settings) {
+        var left = $(window).scrollLeft();
+        return left >= $(element).offset().left + $(element).width() - settings.threshold;
+    };
+
+    $.inviewport = function (element, settings) {
+        return !$.rightofscreen(element, settings) && !$.leftofscreen(element, settings) && !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
+    };
+
+    $.extend($.expr[':'], {
+        "below-the-fold": function (a, i, m) {
+            return $.belowthefold(a, {
+                threshold: 0
+            });
+        },
+        "above-the-top": function (a, i, m) {
+            return $.abovethetop(a, {
+                threshold: 0
+            });
+        },
+        "left-of-screen": function (a, i, m) {
+            return $.leftofscreen(a, {
+                threshold: 0
+            });
+        },
+        "right-of-screen": function (a, i, m) {
+            return $.rightofscreen(a, {
+                threshold: 0
+            });
+        },
+        "in-viewport": function (a, i, m) {
+            return $.inviewport(a, {
+                threshold: 0
+            });
+        }
+    });
+
+    function inviewFilter() {
+        return this && $.inviewport(this, {
+            threshold: 100
+        }) && !$(this).data("loaded");
+    }
+
+    var $$ = $.sub();
+    $$.fn.setLoaded = function () {
+        return this.each(function () {
+            $(this).data("loaded", true);
+        });
+    };
+
+    var scrolling = false;
+    $(window).scroll(function () {
+        //Prevent scroll stacking
+        if (!scrolling) {
+            scrolling = true;
+            setTimeout(function () {
+                $('iframe').filter(inviewFilter).each(function () {
+                    $(this).attr('src', function () {
+                        return $(this).data('src');
+                    });
+                    $$(this).setLoaded();
+                });
+
+                $("div.plusoneContent").filter(inviewFilter).each(function () {
+                    var url = $(this).data("url");
+                    gapi.plusone.render(this, {
+                        href: url
+                    });
+                    $$(this).setLoaded();
+                });
+
+                scrolling = false;
+            }, 250);
+
+        }
+    });
+
+    $(window).trigger('scroll');
+});
+</script>
+
+</div><!-- /wrapper -->
+
+<script>
+var _gaq=[['_setAccount','UA-452464-5'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>

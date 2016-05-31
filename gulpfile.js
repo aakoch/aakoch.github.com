@@ -32,6 +32,11 @@ gulp.task('views', function buildHTML() {
   .pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('copy-html', function copyHtml() {
+    return gulp.src('./app/html/**/*.html') 
+    .pipe(plumber())
+        .pipe(gulp.dest('./app/dist'))
+});
 
 gulp.task('build-js', function(){
   return gulp.src('./app/dist/scripts/*.js')
@@ -54,4 +59,4 @@ gulp.task('serve', function() {
 
 
 
-gulp.task('default', ['styles', 'views', 'build-js', 'serve']);
+gulp.task('default', ['styles', 'views', 'copy-html', 'build-js', 'serve']);
