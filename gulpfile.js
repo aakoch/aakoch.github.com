@@ -5,7 +5,12 @@ var gulp = require('gulp'),
   pug = require("gulp-pug"),
   plumber = require("gulp-plumber");
   watch = require("gulp-watch");
+var ghPages = require('gulp-gh-pages');
 
+gulp.task('deploy', function() {
+  return gulp.src('./app/dist/**/*')
+    .pipe(ghPages({'branch':'master'}));
+});
 
 
 gulp.task('styles', function(){
