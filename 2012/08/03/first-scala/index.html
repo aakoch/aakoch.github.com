@@ -3,7 +3,7 @@
 
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>moz-proxy issues &#124;  Adam Koch</title>
+<title>First Scala &#124;  Adam Koch</title>
 <link rel="alternate" type="application/rss+xml" title="Adam Koch RSS Feed" href="http://www.adamkoch.com/feed/" />
 <link rel="pingback" href="http://www.adamkoch.com/xmlrpc.php" />
 
@@ -16,20 +16,20 @@
 
 <link rel="alternate" type="application/rss+xml" title="Adam Koch &raquo; Feed" href="http://www.adamkoch.com/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Adam Koch &raquo; Comments Feed" href="http://www.adamkoch.com/comments/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Adam Koch &raquo; moz-proxy issues Comments Feed" href="http://www.adamkoch.com/2012/05/04/moz-proxy-issues/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Adam Koch &raquo; First Scala Comments Feed" href="http://www.adamkoch.com/2012/08/03/first-scala/feed/" />
 <script type='text/javascript' src='http://www.adamkoch.com/wp-includes/js/comment-reply.min.js?ver=3.6.1'></script>
 <script type='text/javascript' src='http://www.adamkoch.com/wp-content/themes/motion/js/sfhover.js?ver=3.6.1'></script>
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.adamkoch.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.adamkoch.com/wp-includes/wlwmanifest.xml" /> 
-<link rel='prev' title='Spiders' href='http://www.adamkoch.com/2012/04/30/spiders/' />
-<link rel='next' title='First Scala' href='http://www.adamkoch.com/2012/08/03/first-scala/' />
+<link rel='prev' title='moz-proxy issues' href='http://www.adamkoch.com/2012/05/04/moz-proxy-issues/' />
+<link rel='next' title='Tech Lead Checklist' href='http://www.adamkoch.com/2012/08/23/tech-lead-checklist/' />
 <meta name="generator" content="WordPress 3.6.1" />
-<link rel='canonical' href='http://www.adamkoch.com/2012/05/04/moz-proxy-issues/' />
-<link rel='shortlink' href='http://www.adamkoch.com/?p=2164' />
+<link rel='canonical' href='http://www.adamkoch.com/2012/08/03/first-scala/' />
+<link rel='shortlink' href='http://www.adamkoch.com/?p=2300' />
 <style type="text/css" id="syntaxhighlighteranchor"></style>
 </head>
 
-<body class="single single-post postid-2164 single-format-standard">
+<body class="single single-post postid-2300 single-format-standard">
 <div id="wrapper">
 
 <div id="top">
@@ -70,289 +70,63 @@
 
 		
 		
-		<div class="post-2164 post type-post status-publish format-standard hentry category-professional tag-firefox tag-linkedin tag-mozilla tag-sockets tag-websockets" id="post-2164">
+		<div class="post-2300 post type-post status-publish format-standard hentry category-professional tag-scala" id="post-2300">
 		
 
 			<div class="posttop">
-			  				  <h1 class="posttitle">moz-proxy issues</h1>								<div class="postmetatop">
-					<div class="categs">Filed Under: <a href="http://www.adamkoch.com/category/professional/" title="View all posts in Professional" rel="category tag">Professional</a> by Adam &mdash; <a href="http://www.adamkoch.com/2012/05/04/moz-proxy-issues/#comments" title="Comment on moz-proxy issues">16 Comments</a></div>
-					<div class="date"><span>2012-May-04</span></div>
+			  				  <h1 class="posttitle">First Scala</h1>								<div class="postmetatop">
+					<div class="categs">Filed Under: <a href="http://www.adamkoch.com/category/professional/" title="View all posts in Professional" rel="category tag">Professional</a> by Adam &mdash; <a href="http://www.adamkoch.com/2012/08/03/first-scala/#respond" title="Comment on First Scala">Leave a comment</a></div>
+					<div class="date"><span>2012-Aug-03</span></div>
 				</div>
 			</div>
 
 			<div class="postcontent">
-				<p>I like <a href="http://getfirefox.com">Firefox</a>. A lot. Even <a href="http://en.wikipedia.org/wiki/History_of_Firefox">when it was named Phoenix</a>.</p>
-<p>I even use it at work (using <a title="Apps you can take anywhere" href="http://portableapps.com">PortableApps.com</a>).</p>
-<p>But some sites (ok, only <a href="http://stackexchange.com/">StackExchange</a> sites) I visit I get multiple popups asking for my user name and password. Because I&#8217;m behind a firewall I have to enter my credentials, no big deal. But they don&#8217;t work! So I have to hit Cancel. Not just once, but, like, 4 times!</p>
-<p><span id="more-2164"></span></p>
-<div id="attachment_2169" class="wp-caption alignnone" style="width: 657px"><a href="http://www.adamkoch.com/wp-content/uploads/2012/04/proxy1.png"><img class="size-full wp-image-2169" title="Annoying Proxy Authentication Popup" src="http://www.adamkoch.com/wp-content/uploads/2012/04/proxy1.png" alt="Annoying Popup" width="647" height="183" /></a><p class="wp-caption-text">Annoying Popup</p></div>
-<div id="attachment_2170" class="wp-caption alignnone" style="width: 657px"><a href="http://www.adamkoch.com/wp-content/uploads/2012/04/proxy2.png"><img class="size-full wp-image-2170" title="Annoying Proxy Authentication Popup 2" src="http://www.adamkoch.com/wp-content/uploads/2012/04/proxy2.png" alt="Annoying Popup 2" width="647" height="183" /></a><p class="wp-caption-text">Annoying Popup 2</p></div>
-<p>And it&#8217;s not the HTTP proxy, it&#8217;s asking for a &#8220;moz-proxy&#8221;.</p>
-<p>I finally decided to <a href="http://www.google.com/search?q=moz-proxy">Google my issue</a>. I found <a href="http://support.mozilla.org/en-US/questions/850627">some</a> <a href="http://support.mozilla.org/en-US/questions/814632">reports</a> of <a href="http://support.mozilla.org/en-US/questions/890084">others</a> with <a href="http://support.mozilla.org/en-US/questions/920057">the</a> <a href="http://support.mozilla.org/en-US/questions/890084">same</a> <a href="http://superuser.com/questions/398740/firefox-asks-for-proxy-details-but-only-when-accessing-facebook">issue</a>. (Ironically, the last page was from a <a href="http://stackexchange.com/">StackExchange</a> site and produced the error.)</p>
-<p>When I found <a title="Firefox Proxy.InstallTrigger bug report" href="https://bugzilla.mozilla.org/show_bug.cgi?id=701029">a page suggesting</a> it was a <a title="Firebug Proxy.InstallTrigger issue" href="http://code.google.com/p/fbug/issues/detail?id=4991">Firebug issue</a> I opened it and found a bunch of &#8220;407 Proxy Authentication Required&#8221; errors for <a href="http://sockets.ny.stockexchange.com">http://sockets.ny.stockexchange.com</a>.</p>
-<p><a href="http://www.adamkoch.com/wp-content/uploads/2012/04/firebug.png"><img class="alignnone size-large wp-image-2168" title="firebug" src="http://www.adamkoch.com/wp-content/uploads/2012/04/firebug-1024x510.png" alt="" width="640" height="318" /></a></p>
-<p>I also found these errors in the Javascript Console.</p>
-<p><a href="http://www.adamkoch.com/wp-content/uploads/2012/04/console.png"><img class="alignnone size-large wp-image-2167" title="console" src="http://www.adamkoch.com/wp-content/uploads/2012/04/console-1024x649.png" alt="" width="640" height="405" /></a></p>
-<p>When I saw the &#8220;ws&#8221; protocol I was pretty sure the issue was with <a title="Web Sockets on MDN" href="https://developer.mozilla.org/en/WebSockets">web sockets</a>.</p>
-<p>I decided to look to see if I could turn this off.</p>
-<p>Google didn&#8217;t provide any obvious <a title="Google search for turning off web sockets" href="https://www.google.com/search?q=turn+off+web+sockets+in+firefox">hits</a>, but at the bottom of <a title="Web Sockets on MDN" href="https://developer.mozilla.org/en/WebSockets">this page</a> it mentioned turning <strong>on</strong> web sockets. So I looked in &#8220;<a href="about:config">about:config</a>&#8221; and filtered on &#8220;socket&#8221;.</p>
-<p><a href="http://www.adamkoch.com/wp-content/uploads/2012/04/about-config.png"><img class="alignnone size-full wp-image-2166" title="about-config" src="http://www.adamkoch.com/wp-content/uploads/2012/04/about-config.png" alt="" width="853" height="408" /></a></p>
-<p>Sure enough, I was able to disable web sockets! Hurray! And now I don&#8217;t get those popups! Problem solved!</p>
-<p>(This <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=701029">bug</a> seems to be related.)</p>
-<p>(Maybe I can make <a href="http://www.thedreaming.org/2008/06/18/things-i-hate-about-firefox-3-and-how-to-fix-them/">this guy</a> hate Firefox a little less.)</p>
-<p><a href="http://forums.mozillazine.org/viewtopic.php?f=38&amp;t=2341325">More discussion</a> and a  <a href="http://support.mozilla.org/en-US/questions/830546">possible solution</a>.</p>
+				<p>I was hoping for</p>
+<p><code>def sayHello(name) {<br />
+&nbsp;&nbsp;println("Hello, " + name)<br />
+}</p>
+<p>("world", "Adam").foreach(sayHello)</code></p>
+<p>but will have to settle for</p>
+<p><code>def sayHello(name: String) {<br />
+&nbsp;&nbsp;println("Hello, " + name)<br />
+}</p>
+<p>List("world", "Adam").foreach(sayHello _)</code></p>
 				<div class="linkpages"></div>
-<iframe data-src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.adamkoch.com%2F2012%2F05%2F04%2Fmoz-proxy-issues%2F&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
-<div class="plusoneContent" data-url="http://www.adamkoch.com/2012/05/04/moz-proxy-issues/">
+<iframe data-src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.adamkoch.com%2F2012%2F08%2F03%2Ffirst-scala%2F&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+<div class="plusoneContent" data-url="http://www.adamkoch.com/2012/08/03/first-scala/">
 <g:plusone></g:plusone>
 </div>
 				<p>
-				<span class="alignleft">&laquo; <a href="http://www.adamkoch.com/2012/04/30/spiders/" rel="prev">Spiders</a></span>
-				<span class="alignright"><a href="http://www.adamkoch.com/2012/08/03/first-scala/" rel="next">First Scala</a> &raquo;</span>
+				<span class="alignleft">&laquo; <a href="http://www.adamkoch.com/2012/05/04/moz-proxy-issues/" rel="prev">moz-proxy issues</a></span>
+				<span class="alignright"><a href="http://www.adamkoch.com/2012/08/23/tech-lead-checklist/" rel="next">Tech Lead Checklist</a> &raquo;</span>
 				</p>
 				<div class="clear"></div>
 
 			</div>
 			<small></small>
-			<small class="permalink"><a href="http://www.adamkoch.com/2012/05/04/moz-proxy-issues/" rel="bookmark" title="Permanent Link to moz-proxy issues">Permanent Link</a></small>
+			<small class="permalink"><a href="http://www.adamkoch.com/2012/08/03/first-scala/" rel="bookmark" title="Permanent Link to First Scala">Permanent Link</a></small>
 
 			<div class="postmetabottom">
-				<div class="tags">Tags: <a href="http://www.adamkoch.com/tag/firefox/" rel="tag">firefox</a>, <a href="http://www.adamkoch.com/tag/linkedin/" rel="tag">linkedin</a>, <a href="http://www.adamkoch.com/tag/mozilla/" rel="tag">mozilla</a>, <a href="http://www.adamkoch.com/tag/sockets/" rel="tag">sockets</a>, <a href="http://www.adamkoch.com/tag/websockets/" rel="tag">websockets</a></div>
-				<div class="readmore"><a href='http://www.adamkoch.com/2012/05/04/moz-proxy-issues/feed/'>Comments <abbr title="Really Simple Syndication">RSS</abbr> feed</a></div>
+				<div class="tags">Tags: <a href="http://www.adamkoch.com/tag/scala/" rel="tag">scala</a></div>
+				<div class="readmore"><a href='http://www.adamkoch.com/2012/08/03/first-scala/feed/'>Comments <abbr title="Really Simple Syndication">RSS</abbr> feed</a></div>
 			</div>
 
 		</div><!-- /post -->
 
 		<div id="comments">
 		
-    <h3>16 Comments: </h3>
-  <ul class="commentlist">
-    	<li class="comment even thread-even depth-1" id="li-comment-1637">
-	<div id="comment-1637" class="comment-wrap">
-		<img alt='' src='http://0.gravatar.com/avatar/244d8d938d45c91d698672290d9f7592?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">Bwooce</div>
-						<div class="commentmetadata"><a href="#comment-1637" title="">May 27th, 2012 at 21:54</a> </div>
-			<p>Nice, thanks for this &#8212; works for me too (and I have Firebug installed&#8230;)</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1637#respond' onclick='return addComment.moveForm("comment-1637", "1637", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1664">
-	<div id="comment-1664" class="comment-wrap">
-		<img alt='' src='http://1.gravatar.com/avatar/3255def900f904a3af3918e2824ecff3?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author"><a href='http://yagni.net' rel='external nofollow' class='url'>Kramii</a></div>
-						<div class="commentmetadata"><a href="#comment-1664" title="">June 13th, 2012 at 03:36</a> </div>
-			<p>Thanks &#8211; this issue with Firefox had been driving me nuts. You&#8217;ve made my day!</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1664#respond' onclick='return addComment.moveForm("comment-1664", "1664", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment even thread-even depth-1" id="li-comment-1666">
-	<div id="comment-1666" class="comment-wrap">
-		<img alt='' src='http://1.gravatar.com/avatar/15dd1d7f3f308a5766058dc028366085?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">Barrie</div>
-						<div class="commentmetadata"><a href="#comment-1666" title="">June 13th, 2012 at 20:13</a> </div>
-			<p>Thanks, this is the only solution I have found so far.<br />
-<a href="https://trello.com/" rel="nofollow">https://trello.com/</a> was causing this to pop up all the time.</p>
-<p>I didn&#8217;t even know there was an error console!<br />
-But it clearly gives me the cause of the problem</p>
-<p>Error: Firefox can&#8217;t establish a connection to the server at wss://trello.com/socket.io/1/websocket/&#8230;</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1666#respond' onclick='return addComment.moveForm("comment-1666", "1666", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1728">
-	<div id="comment-1728" class="comment-wrap">
-		<img alt='' src='http://0.gravatar.com/avatar/e753169c7fbe6aad532cff0e1cf690ab?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">rahul</div>
-						<div class="commentmetadata"><a href="#comment-1728" title="">August 6th, 2012 at 01:39</a> </div>
-			<p>Thanks worked for me as well! Good trick!<br />
-It was very annoying</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1728#respond' onclick='return addComment.moveForm("comment-1728", "1728", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment even thread-even depth-1" id="li-comment-1743">
-	<div id="comment-1743" class="comment-wrap">
-		<img alt='' src='http://1.gravatar.com/avatar/317bafeeda69d359e34f813aff940944?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">decembre</div>
-						<div class="commentmetadata"><a href="#comment-1743" title="">August 22nd, 2012 at 06:28</a> </div>
-			<p>thanks for the help!<br />
-All is good for me too after change this value to &#8220;false&#8221;</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1743#respond' onclick='return addComment.moveForm("comment-1743", "1743", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1782">
-	<div id="comment-1782" class="comment-wrap">
-		<img alt='' src='http://0.gravatar.com/avatar/4c8a9bec5a27b66b28d3c5cddeb70e93?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">anonymous</div>
-						<div class="commentmetadata"><a href="#comment-1782" title="">September 1st, 2012 at 03:18</a> </div>
-			<p>Awesome.  Thank you.  <img src='http://www.adamkoch.com/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />   I dont have Firebug installed and was having this issue with an Enjin site.  fixed it right up.  <img src='http://www.adamkoch.com/wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley' /> </p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1782#respond' onclick='return addComment.moveForm("comment-1782", "1782", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment even thread-even depth-1" id="li-comment-1797">
-	<div id="comment-1797" class="comment-wrap">
-		<img alt='' src='http://0.gravatar.com/avatar/6d07ff19081119db615005a337f6de97?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">Mahantesh</div>
-						<div class="commentmetadata"><a href="#comment-1797" title="">September 5th, 2012 at 03:35</a> </div>
-			<p>Thanks for the Info it works like charm</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1797#respond' onclick='return addComment.moveForm("comment-1797", "1797", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1886">
-	<div id="comment-1886" class="comment-wrap">
-		<img alt='' src='http://0.gravatar.com/avatar/c9a2515315b1ee5f7dcc9ac73d5989e5?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">Kai</div>
-						<div class="commentmetadata"><a href="#comment-1886" title="">November 13th, 2012 at 04:24</a> </div>
-			<p>Thanks to your blog entry I finally got rid of that annoying dialog.</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1886#respond' onclick='return addComment.moveForm("comment-1886", "1886", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment even thread-even depth-1" id="li-comment-1974">
-	<div id="comment-1974" class="comment-wrap">
-		<img alt='' src='http://0.gravatar.com/avatar/281dd26b70df2b5152c2925d536ce09e?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">Santi</div>
-						<div class="commentmetadata"><a href="#comment-1974" title="">March 5th, 2013 at 06:06</a> </div>
-			<p>This didn&#8217;t work for me, at least in the firebug console I keep getting the anoying error.</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=1974#respond' onclick='return addComment.moveForm("comment-1974", "1974", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2023">
-	<div id="comment-2023" class="comment-wrap">
-		<img alt='' src='http://0.gravatar.com/avatar/06443cbd4156d5163eafa78787aef6a9?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author"><a href='http://www.con-line.org' rel='external nofollow' class='url'>Jan</a></div>
-						<div class="commentmetadata"><a href="#comment-2023" title="">April 24th, 2013 at 01:25</a> </div>
-			<p>Take this as a +1 (as g+ is blocked over here). Saves me a lot of clicking.</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2023#respond' onclick='return addComment.moveForm("comment-2023", "2023", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment even thread-even depth-1" id="li-comment-2046">
-	<div id="comment-2046" class="comment-wrap">
-		<img alt='' src='http://0.gravatar.com/avatar/e3924e0f46c705f6310b68ea94797df2?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author"><a href='http://burrellramone.com' rel='external nofollow' class='url'>Ramone</a></div>
-						<div class="commentmetadata"><a href="#comment-2046" title="">May 9th, 2013 at 09:16</a> </div>
-			<p>I wasn&#8217;t having an issue with the dialog, only the persistent errors in firebug. Needless to say that the method did not work for me. Thanks anyway,  I might be able to help someone with the same issue later on.</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2046#respond' onclick='return addComment.moveForm("comment-2046", "2046", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2084">
-	<div id="comment-2084" class="comment-wrap">
-		<img alt='' src='http://1.gravatar.com/avatar/bf9c4af8c8c78712e9a09295192637a6?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">Spiderman</div>
-						<div class="commentmetadata"><a href="#comment-2084" title="">June 20th, 2013 at 05:45</a> </div>
-			<p>Unfortunately, I have set network.websocket.enabled to false in v19.0.2 and I still get the same issue.</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2084#respond' onclick='return addComment.moveForm("comment-2084", "2084", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment even thread-even depth-1" id="li-comment-2088">
-	<div id="comment-2088" class="comment-wrap">
-		<img alt='' src='http://0.gravatar.com/avatar/6425e0ece730bc7eb06a12f613e3bd09?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">Rene</div>
-						<div class="commentmetadata"><a href="#comment-2088" title="">June 28th, 2013 at 08:42</a> </div>
-			<p>Not working on Firefox ESR 17</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2088#respond' onclick='return addComment.moveForm("comment-2088", "2088", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2091">
-	<div id="comment-2091" class="comment-wrap">
-		<img alt='' src='http://1.gravatar.com/avatar/f11a9296cce2fdf4f5be3265b891c54d?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">Alicia</div>
-						<div class="commentmetadata"><a href="#comment-2091" title="">July 2nd, 2013 at 02:53</a> </div>
-			<p>It worked for me until recently, I&#8217;ve been getting these popups again for a few weeks now.<br />
-If you have any other tips, I&#8217;d love to hear them.</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2091#respond' onclick='return addComment.moveForm("comment-2091", "2091", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-<ul class="children">
-	<li class="comment even depth-2" id="li-comment-2095">
-	<div id="comment-2095" class="comment-wrap">
-		<img alt='' src='http://1.gravatar.com/avatar/3926ca3ed1e306d3c549f9c08467b13c?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author">TB</div>
-						<div class="commentmetadata"><a href="#comment-2095" title="">July 7th, 2013 at 16:11</a> </div>
-			<p>Me too, then I saw this suggestion:<br />
-&#8220;I fixed this by setting<br />
-network.http.max-persistent-connections-per-proxy<br />
-to the max and adding the AutoAuth extension&#8221; from a forum</p>
-<p>I tried and it solved my problem.</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=2095#respond' onclick='return addComment.moveForm("comment-2095", "2095", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-</ul><!-- .children -->
-</li><!-- #comment-## -->
-	<li class="comment odd alt thread-even depth-1" id="li-comment-6812">
-	<div id="comment-6812" class="comment-wrap">
-		<img alt='' src='http://1.gravatar.com/avatar/11dc238b55d56d2767797430f1aa8bfc?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=R' class='avatar avatar-50 photo' height='50' width='50' />		<div class="commentbody">
-			<div class="author"><a href='http://www.operationtechnology.com' rel='external nofollow' class='url'>Operation Technology Web Design</a></div>
-						<div class="commentmetadata"><a href="#comment-6812" title="">July 31st, 2015 at 14:12</a> </div>
-			<p>This day and age, we are still getting these moz-proxy pop up boxes. The console is set to false. Any new ideas?</p>
-		</div><!-- /commentbody -->
-
-		<div class="reply">
-		<a class='comment-reply-link' href='/2012/05/04/moz-proxy-issues/?replytocom=6812#respond' onclick='return addComment.moveForm("comment-6812", "6812", "respond", "2164")'>Reply</a>		</div>
-	</div><!-- /comment -->
-</li><!-- #comment-## -->
-  </ul>
-  
-  <div id="navigation">
-    <div class="alignleft"></div>
-    <div class="alignright"></div>
-  </div><!-- /navigation -->
-
-  
-
 								<div id="respond" class="comment-respond">
-				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2012/05/04/moz-proxy-issues/#respond" style="display:none;">Cancel reply</a></small></h3>
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2012/08/03/first-scala/#respond" style="display:none;">Cancel reply</a></small></h3>
 									<form action="http://www.adamkoch.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
 																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
 <p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
 <p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
 												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
 							<input name="submit" type="submit" id="submit" value="Post Comment" />
-							<input type='hidden' name='comment_post_ID' value='2164' id='comment_post_ID' />
+							<input type='hidden' name='comment_post_ID' value='2300' id='comment_post_ID' />
 <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
 						</p>
-						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="36e65debc8" /></p>					</form>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ffbf8a8792" /></p>					</form>
 							</div><!-- #respond -->
 								</div><!-- /comments -->
 
