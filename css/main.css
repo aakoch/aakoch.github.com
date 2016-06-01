@@ -1057,7 +1057,7 @@ th {
   box-sizing: border-box; }
 
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent; }
 
 body {
@@ -6429,3 +6429,20 @@ button.close {
     display: none !important; } }
 
 /*# sourceMappingURL=bootstrap.css.map */
+.vcard .fn {
+  font-size: 2em; }
+
+.vcard .adr .street-address {
+  display: block; }
+
+.vcard .adr .postal-code {
+  margin-left: 1em; }
+
+.vcard .bio-label::after {
+  content: ": "; }
+
+body {
+  background-image: url("../brainscan.svg");
+  background-size: 100%; }
+  body .container {
+    background-color: rgba(255, 255, 255, 0.8); }
