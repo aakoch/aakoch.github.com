@@ -39,8 +39,8 @@ gulp.task('copy-html', function copyHtml() {
 });
 
 gulp.task('build-js', function(){
-  return gulp.src('./app/dist/scripts/*.js')
-    .pipe(watch('./app/dist/scripts/*.js'))
+  return gulp.src('./app/js/*.js')
+    .pipe(watch('./app/js/*.js'))
     .pipe(browserSync.reload({stream: true}));
 });
 

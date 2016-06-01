@@ -7,40 +7,45 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>aakoch s GitHub page</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>aakoch s GitHub / resume</title>
+  <meta name="description" content="Adam Koch's Resume">
+  <meta name="author" content="Adam Koch">
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-  <meta property="og:title" content="| Website Title |">
-  <meta property="og:url" content="| Website URL |">
-  <meta property="og:image" content="| Link to img |">
-  <meta property="og:description" content=" | Description |">
   <link rel="shortcut icon" href="favicon.ico">
-  <meta name="theme-color" content="| color theme |">
-  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/main.css">
   <link rel="author" href="humans.txt">
 </head>
 <body><!--[if lt IE 9]>
 <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-  <header>
-    <div class="logo"><img src="" alt="Logo"/></div>
-    <div class="menu" id="menu"><span class="lines" id="line-1"></span><span class="lines" id="line-2"></span><span class="lines" id="line-3"></span></div>
-    <nav>
-      <ul>
-        <li>Item-1</li>
-        <li>Item-2</li>
-        <li>Item-3</li>
-        <li>Item-4</li>
-        <li>Item-5</li>
-      </ul>
+  <div class="container">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">1</span><span class="icon-bar">2</span><span class="icon-bar">3</span></button><a class="navbar-brand">Project Name</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="active"> <a>Home</a></li>
+            <li> <a>About</a></li>
+            <li> <a>Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-  </header>
-  <div class="center">
-    <h1>Adam Koch</h1>
-    <p>Welcome to my mission-s generator.</p>
+    <div class="center"></div>
+    <address class="vcard"> 
+      <div class="fn">Adam Koch</div>
+      <div class="adr"><span class="street-address">6312 N. 150th Street</span><span class="locality">Omaha</span><span>, </span><span class="region">NE</span><span class="postal-code">68116</span></div>
+      <div class="bio-label">Email<a href="adam@dogtired.org">adam@dogtired.org</a></div>
+      <div class="bio-label">Homepage<a href="http://adamkoch.com">adamkoch.com</a></div>
+      <div class="bio-label">Phone<span class="tel">402-614-5828</span></div>
+    </address>
+    <ol class="vcalendar">
+      <li class="experience vevent"><span class="summary">Developer</span><span class="location">Union Pacific Railroad</span><abbr class="dtstart" title="2000-03-20">March 2000 -</abbr><abbr title="present">present</abbr></li>
+    </ol>
   </div>
-  <script src="scripts/vendor/jQuery/dist/jquery.min.js"></script>
+  <div>View the source for this on <a href="https://github.com/aakoch/aakoch.github.com">GitHub</a></div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="scripts/main.js"></script>
 </body>
