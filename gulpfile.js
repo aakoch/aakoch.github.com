@@ -3,39 +3,32 @@ var gulp = require('gulp'),
   cssnano = require('gulp-cssnano'),
   browserSync = require('browser-sync').create(),
   pug = require("gulp-pug"),
-  plumber = require("gulp-plumber");
-  watch = require("gulp-watch");
-var ghPages = require('gulp-gh-pages');
+  plumber = require("gulp-plumber"),
+  watch = require("gulp-watch"),
+  ghPages = require('gulp-gh-pages');
 
-gulp.task('deploy', function() {
-  return gulp.src('./app/dist/**/*')
-    .pipe(ghPages({'branch':'master'}));
-});
-
-
-gulp.task('styles', function(){
+gulp.task('styles', function compileSass(){
   gulp.src('./app/sass/main.sass')
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('./app/dist/css'))
+    .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.reload({stream: true}));
 });
 
-
-gulp.task('views', function buildHTML() {
+gulp.task('pug', function buildHTML() {
   return gulp.src('./app/pug/index.pug')
-  .pipe(plumber())
-  .pipe(pug({
-    pretty: true
-  }))
-  .pipe(gulp.dest('./app/dist'))
-  .pipe(browserSync.reload({stream: true}));
+    .pipe(plumber())
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest('./dist'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('copy-html', function copyHtml() {
-    return gulp.src('./app/html/**/*.html') 
-    .pipe(plumber())
-        .pipe(gulp.dest('./app/dist'))
+gulp.task('copy-assets', function copyHtml() {
+    return gulp.src('./app/assets/**/*') 
+      .pipe(plumber())
+      .pipe(gulp.dest('./dist'))
 });
 
 gulp.task('build-js', function(){
@@ -44,19 +37,21 @@ gulp.task('build-js', function(){
     .pipe(browserSync.reload({stream: true}));
 });
 
-
 gulp.task('serve', function() {
   browserSync.init({
     server: {
-      baseDir: './app/dist'
+      baseDir: './dist'
     }
   });
   gulp.watch('./app/sass/*.sass', ['styles']);
-  gulp.watch('./app/pug/*.pug', ['views']);
-  gulp.watch('./app/dist/scripts/*.js', ['build-js']);
-  gulp.watch('./app/dist/*.html').on('change', browserSync.reload);
+  gulp.watch('./app/pug/*.pug', ['pug']);
+  gulp.watch('./app/js/*.js', ['build-js']);
+  gulp.watch('./app/*.html').on('change', browserSync.reload);
 });
 
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages({'branch':'master'}));
+});
 
-
-gulp.task('default', ['styles', 'views', 'copy-html', 'build-js', 'serve']);
+gulp.task('default', ['styles', 'pug', 'copy-assets', 'build-js', 'serve']);
