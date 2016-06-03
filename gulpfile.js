@@ -1,19 +1,17 @@
 var gulp = require('gulp'),
-  sass = require('gulp-sass'),
-  cssnano = require('gulp-cssnano'),
-  browserSync = require('browser-sync').create(),
-  pug = require("gulp-pug"),
-  plumber = require("gulp-plumber"),
-  watch = require("gulp-watch"),
-  ghPages = require('gulp-gh-pages');
-
-gulp.task('styles', function compileSass(){
-  gulp.src('./app/sass/main.sass')
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(gulp.dest('./dist/css'))
-    .pipe(browserSync.reload({stream: true}));
-});
+    sass = require('gulp-sass'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    notify = require('gulp-notify'),
+    minifycss = require('gulp-cssnano'),
+    concat = require('gulp-concat'),
+    plumber = require('gulp-plumber'),
+    neat = require('node-neat'),
+    browserSync = require('browser-sync'),
+    pug = require("gulp-pug"),
+    watch = require("gulp-watch"),
+    ghPages = require('gulp-gh-pages'),
+    reload = browserSync.reload;
 
 gulp.task('pug', function buildHTML() {
   return gulp.src('./app/pug/index.pug')
@@ -31,10 +29,45 @@ gulp.task('copy-assets', function copyHtml() {
       .pipe(gulp.dest('./dist'))
 });
 
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages({'branch':'master'}));
+});
+
+gulp.task('js', function() {
+	return gulp.src(['./app/js/*.js'], ['!./app/js/concat.js'])
+	.pipe(concat('concat.js'))
+	.pipe(gulp.dest('./app/js'))
+});
+
 gulp.task('build-js', function(){
   return gulp.src('./app/js/*.js')
     .pipe(watch('./app/js/*.js'))
     .pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('sass', function () {  
+	gulp.src('./app/sass/*.sass')
+	.pipe(plumber())
+	.pipe(sass({
+		includePaths: ['scss'].concat(neat)
+	}))
+	.pipe(gulp.dest('./build/sass//tmp'))
+	.pipe(rename({suffix: '.min'}))
+	.pipe(minifycss())
+	.pipe(gulp.dest('./app/css'))
+});
+
+gulp.task('reload', function () {
+	browserSync.reload();
+});
+
+gulp.task('browser-sync', function() {
+	browserSync.init({
+		server: {
+			baseDir: "./app"
+		}
+	});
 });
 
 gulp.task('serve', function() {
@@ -49,9 +82,4 @@ gulp.task('serve', function() {
   gulp.watch('./app/*.html').on('change', browserSync.reload);
 });
 
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages({'branch':'master'}));
-});
-
-gulp.task('default', ['styles', 'pug', 'copy-assets', 'build-js', 'serve']);
+gulp.task('default', ['js', 'sass', 'pug', 'copy-assets', 'build-js', 'serve']);
