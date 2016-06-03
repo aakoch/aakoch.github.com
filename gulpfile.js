@@ -79,6 +79,7 @@ gulp.task('serve', function() {
   gulp.watch('./app/sass/*.sass', ['styles']);
   gulp.watch('./app/pug/*.pug', ['pug']);
   gulp.watch('./app/js/*.js', ['build-js']);
+  gulp.watch('./app/assets/**/*', ['copy-assets']);
   gulp.watch('./app/*.html').on('change', browserSync.reload);
 });
 
