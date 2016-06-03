@@ -14,7 +14,7 @@ var gulp = require('gulp'),
     reload = browserSync.reload;
 
 gulp.task('pug', function buildHTML() {
-  return gulp.src('./app/pug/index.pug')
+  return gulp.src('./app/pug/*.pug')
     .pipe(plumber())
     .pipe(pug({
       pretty: true

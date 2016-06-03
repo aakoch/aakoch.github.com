@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='../../favicon.ico')
+    title Navbar Template for Bootstrap
+    // Bootstrap core CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='css/navbar.css', rel='stylesheet')
+  body
+    .container
+      nav.navbar.navbar-light.bg-faded
+        button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#navbar-header', aria-controls='navbar-header')
+          | &#x2630;
+        #navbar-header.collapse.navbar-toggleable-xs
+          a.navbar-brand(href='#') Navbar
+          ul.nav.navbar-nav
+            li.nav-item.active
+              a.nav-link(href='#')
+                | Home 
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='#') Features
+            li.nav-item
+              a.nav-link(href='#') Pricing
+            li.nav-item
+              a.nav-link(href='#') About
+          form.form-inline.pull-xs-right
+            input.form-control(type='text', placeholder='Search')
+            button.btn.btn-success-outline(type='submit') Search
+      // /navbar
+      // Main component for a primary marketing message or call to action
+      .jumbotron
+        h1 Navbar example
+        |         
+        p
+          | This example is a quick exercise to illustrate how the default responsive navbar works. It&apos;s placed within a 
+          code .container
+          |  to limit its width and will scroll with the rest of the page&apos;s content.
+        |         
+        p
+          | At the smallest breakpoint, the collapse plugin is used to hide the links and show a menu button to toggle the collapsed content.
+        |         
+        p
+          a.btn.btn-lg.btn-primary(href='../../components/navbar', role='button') View navbar docs &raquo;
+    // /container
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\\/script>')
+    script(src='js/tether.min.js')
+    script(src='js/bootstrap.min.js')
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    script(src='js/ie10-viewport-bug-workaround.js')
