@@ -10,7 +10,17 @@
 //    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
 //    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
+$green: #378087;
+$offWhite: #E8E8EB;
+$lightBlue: #A9C5E1;
+$darkBlue: #253551;
+$gray: #828792;
+  
+$accentColor: $green;
+$backgroundColor: $offWhite;
 
+address.vcard
+  font-style: normal;
 .vcard 
   .fn
     font-size: 2em;
@@ -23,11 +33,12 @@
   .bio-label::after
       content: ": ";
     
-body 
-  background-image: url('../images/brainscan.svg');
-  background-size: 100%;
-  font-family: "Avenir Next"
-  
+body
+  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: $backgroundColor;
   .container
     background-color: rgba(255,255,255,.8)
 

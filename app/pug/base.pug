@@ -1,30 +1,28 @@
 doctype html
-
-<!--[if lt IE 9]>
-<html class='lt-ie9 no-js' lang='en'>
-<![endif]-->
-<!--[if gte IE 9]><!-->
-<html class='no-js' lang='en'>
-<!--<![endif]-->
+html(lang='en')
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    title aakoch s GitHub / resume
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     meta(name="description", content="Adam Koch's Resume")
     meta(name="author", content="Adam Koch")
-    meta(name="viewport", content="width=device-width,initial-scale=1,user-scalable=no")
+    title aakoch s GitHub / resume
 
     link(rel="shortcut icon" href="favicon.ico")
 
     link(rel="stylesheet", href="css/bootstrap.css")
+    link(href='css/navbar.css', rel='stylesheet')
     link(rel="stylesheet", href="css/main.css")
     link(rel="author", href="humans.txt")
 
-body
-  <!--[if lt IE 9]>
-  <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+  body
 
-  block content
-  script(src="https://code.jquery.com/jquery-2.2.4.min.js")
-  script(src="js/bootstrap.min.js")
+    block content
+
+    script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+    script.
+      window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\\/script>')
+    script(src='js/tether.min.js')
+    script(src='js/bootstrap.min.js')
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    script(src='js/ie10-viewport-bug-workaround.js')

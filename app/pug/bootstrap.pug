@@ -13,33 +13,31 @@ html(lang='en')
     link(href='css/bootstrap.min.css', rel='stylesheet')
     // Custom styles for this template
     link(href='css/navbar.css', rel='stylesheet')
+    link(href='css/main.css', rel='stylesheet')
   body
     .container
+      div( style="float:left")
+        image.avatar(src='images/motel.png')
+      h1(style="") Adam A. Koch
       nav.navbar.navbar-light.bg-faded
         button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#navbar-header', aria-controls='navbar-header')
           | &#x2630;
         #navbar-header.collapse.navbar-toggleable-xs
-          a.navbar-brand(href='#') Navbar
+          a.navbar-brand(href='#') 
           ul.nav.navbar-nav
             li.nav-item.active
               a.nav-link(href='#')
                 | Home 
                 span.sr-only (current)
             li.nav-item
-              a.nav-link(href='#') Features
+              a.nav-link(href='skill.html') Skills
             li.nav-item
-              a.nav-link(href='#') Pricing
+              a.nav-link(href='experience.html') Experience
             li.nav-item
-              a.nav-link(href='#') About
-          form.form-inline.pull-xs-right
-            input.form-control(type='text', placeholder='Search')
-            button.btn.btn-success-outline(type='submit') Search
-      // /navbar
-      // Main component for a primary marketing message or call to action
+              a.nav-link(href='training.html') Training
       .jumbotron
-        h1 Navbar example
-        |         
-        p
+        quote “We must be willing to let go of the life we planned so as to have the life that is waiting for us.” -- Joseph Campbell
+
           | This example is a quick exercise to illustrate how the default responsive navbar works. It&apos;s placed within a 
           code .container
           |  to limit its width and will scroll with the rest of the page&apos;s content.

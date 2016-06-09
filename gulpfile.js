@@ -9,9 +9,14 @@ var gulp = require('gulp'),
     neat = require('node-neat'),
     browserSync = require('browser-sync'),
     pug = require("gulp-pug"),
-    watch = require("gulp-watch"),
     ghPages = require('gulp-gh-pages'),
+    del = require('del'),
     reload = browserSync.reload;
+
+gulp.task('clean', function() {
+  // You can use multiple globbing patterns as you would with `gulp.src`
+  return del(['dist']);
+});
 
 gulp.task('pug', function buildHTML() {
   return gulp.src('./app/pug/*.pug')
@@ -40,47 +45,34 @@ gulp.task('js', function() {
 	.pipe(gulp.dest('./app/js'))
 });
 
-gulp.task('build-js', function(){
-  return gulp.src('./app/js/*.js')
-    .pipe(watch('./app/js/*.js'))
-    .pipe(browserSync.reload({stream: true}));
-});
-
 gulp.task('sass', function () {  
 	gulp.src('./app/sass/*.sass')
 	.pipe(plumber())
-	.pipe(sass({
-		includePaths: ['scss'].concat(neat)
-	}))
-	.pipe(gulp.dest('./build/sass//tmp'))
-	.pipe(rename({suffix: '.min'}))
-	.pipe(minifycss())
-	.pipe(gulp.dest('./app/css'))
+	.pipe(sass())
+//	.pipe(gulp.dest('./build/sass/tmp'))
+//	.pipe(rename({suffix: '.min'}))
+//	.pipe(minifycss())
+	.pipe(gulp.dest('./dist/css'))
 });
 
-gulp.task('reload', function () {
-	browserSync.reload();
-});
-
-gulp.task('browser-sync', function() {
-	browserSync.init({
-		server: {
-			baseDir: "./app"
-		}
-	});
-});
-
-gulp.task('serve', function() {
+gulp.task('serve', ['build'], function() {
+  console.log("entering serve")
   browserSync.init({
     server: {
       baseDir: './dist'
     }
   });
-  gulp.watch('./app/sass/*.sass', ['styles']);
-  gulp.watch('./app/pug/*.pug', ['pug']);
-  gulp.watch('./app/js/*.js', ['build-js']);
+  gulp.watch('./app/sass/**/*.sass', ['sass']);
+  gulp.watch('./app/pug/**/*.pug', ['pug']);
+  gulp.watch('./app/js/**/*.js', ['js']);
   gulp.watch('./app/assets/**/*', ['copy-assets']);
-  gulp.watch('./app/*.html').on('change', browserSync.reload);
+  gulp.watch('./dist/**/*', function(event) {
+    browserSync.reload();
+  });
 });
 
-gulp.task('default', ['js', 'sass', 'pug', 'copy-assets', 'build-js', 'serve']);
+gulp.task('build', ['js', 'sass', 'pug', 'copy-assets'], function (cb) {
+  cb();
+});
+
+gulp.task('default', ['build', 'serve']);

@@ -1,18 +1,16 @@
-mixin nav
-    nav.navbar.navbar-dark.bg-inverse
-        .container
-            .navbar-header
-                button.navbar-toggle.collapsed(type=button data-toggle="collapse" data-target="#navbar" aria expanded="false" aria-controls="navbar")
-                    span.sr-only 
-                    span.icon-bar 
-                    span.icon-bar 
-                a.navbar-brand Adam Koch
-            .collapse.navbar-collapse#navbar
-                ul.nav.navbar-nav
-                    li.active 
-                        a About
-                    li 
-                        a Experience
-                    li 
-                        a Work History
-                    
+mixin nav           
+  nav.navbar.navbar-light.bg-faded
+    button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#navbar-header', aria-controls='navbar-header')
+    #navbar-header.collapse.navbar-toggleable-xs
+      a.navbar-brand(href='#') 
+      ul.nav.navbar-nav
+        li.nav-item.active
+          a.nav-link(href='#')
+            | Home 
+            span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='skill.html') Skills
+        li.nav-item
+          a.nav-link(href='experience.html') Experience
+        li.nav-item
+          a.nav-link(href='training.html') Training
