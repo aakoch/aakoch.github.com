@@ -1,54 +1,57 @@
-<!DOCTYPE html><!--[if lt IE 9]>
-<html class='lt-ie9 no-js' lang='en'>
-<![endif]-->
-<!--[if gte IE 9]><!-->
-<html class='no-js' lang='en'>
-<!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>aakoch s GitHub / resume</title>
-  <meta name="description" content="Adam Koch's Resume">
-  <meta name="author" content="Adam Koch">
-  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="author" href="humans.txt">
-</head>
-<body><!--[if lt IE 9]>
-<p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-  <div class="container">
-    <nav class="navbar navbar-dark bg-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria="aria" expanded="false" aria-controls="navbar"><span class="sr-only"> </span><span class="icon-bar"> </span><span class="icon-bar"> </span></button><a class="navbar-brand">Adam Koch</a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Adam Koch's Resume">
+    <meta name="author" content="Adam Koch">
+    <title>aakoch s GitHub / resume</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <div style="margin:.4em 2em 2em">
+      <div style="float:left">
+        <image class="avatar" src="images/motel.png" style="height: 10em"></image>
+      </div>
+      <h1>Adam Koch</h1><a href="https://github.com/aakoch">aakoch</a>
+    </div>
+    <div class="container">
+      <nav class="navbar navbar-light bg-faded">
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header"></button>
+        <div class="collapse navbar-toggleable-xs" id="navbar-header"><a class="navbar-brand" href="#"> </a>
           <ul class="nav navbar-nav">
-            <li class="active"> <a>About</a></li>
-            <li> <a>Experience</a></li>
-            <li> <a>Work History</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="skill.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="training.html">Training</a></li>
           </ul>
         </div>
+      </nav>
+      <div class="jumbotron">
+        <ol class="vcalendar">
+          <li class="experience vevent"><span class="summary">Developer</span><span class="location">Union Pacific Railroad</span><abbr class="dtstart" title="2000-03-20">March 2000 -</abbr><abbr title="present">present</abbr></li>
+        </ol>
+        <div>View the source for this on <a href="https://github.com/aakoch/aakoch.github.com">GitHub</a></div>
       </div>
-    </nav>
-    <div class="main">
-      <image class="avatar" src="images/motel.png"></image>
+      <quote>“We must be willing to let go of the life we planned so as to have the life that is waiting for us.” -- Joseph Campbell</quote>
       <address class="vcard"> 
-        <div class="fn">Adam Koch</div>
+        <div class="fn">Adam A. Koch</div>
         <div class="adr"><span class="street-address">6312 N. 150th Street</span><span class="locality">Omaha</span><span>, </span><span class="region">NE</span><span class="postal-code">68116</span></div>
-        <div><span class="bio-label">Email</span><a href="mailto:adam@dogtired.org">adam@dogtired.org</a></div>
-        <div> <span class="bio-label">Homepage</span><a href="http://adamkoch.com">adamkoch.com</a></div>
-        <div><span class="bio-label">Phone</span><span class="tel">402-614-5828</span></div>
-      </address>
-      <ol class="vcalendar">
-        <li class="experience vevent"><span class="summary">Developer</span><span class="location">Union Pacific Railroad</span><abbr class="dtstart" title="2000-03-20">March 2000 -</abbr><abbr title="present">present</abbr></li>
-      </ol>
+        <div><a href="mailto:adam@dogtired.org">adam@dogtired.org</a></div>
+        <div> <a href="http://adamkoch.com">adamkoch.com</a></div>
+        <div><span class="tel">402-614-5828</span></div>
+      </address><%= octicon(:symbol => "alert") %>
     </div>
-    <div>View the source for this on <a href="https://github.com/aakoch/aakoch.github.com">GitHub</a></div>
-  </div>
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\\/script>')</script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug-->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
