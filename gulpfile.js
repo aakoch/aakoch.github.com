@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     pug = require("gulp-pug"),
     ghPages = require('gulp-gh-pages'),
     del = require('del'),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    package = require('./package.json'); // not used yet
 
 gulp.task('clean', function() {
   // You can use multiple globbing patterns as you would with `gulp.src`
@@ -39,10 +40,30 @@ gulp.task('deploy', function() {
     .pipe(ghPages({'branch':'master'}));
 });
 
+gulp.task('copy-backup-jquery', function() {
+  return gulp.src('./node_modules/jquery/dist/jquery.min.js')
+    .pipe(gulp.dest('./dist/js/vendor'));
+});
+
+gulp.task('concat-minified-js', function() {
+  return gulp.src(['./node_modules/tether/dist/js/tether.min.js',
+                   './app/assets/js/ie10-viewport-bug-workaround.js',
+                  './node_modules/bootstrap/dist/js/bootstrap.min.js',
+                  './node_modules/snapsvg/dist/snap.svg-min.js'])
+    .pipe(concat('concat.js'))
+    .pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('concat-minified-css', function() {
+  return gulp.src('./node_modules/bootstrap/dist/css/bootstrap.min.css')
+    .pipe(concat('concat.css'))
+    .pipe(gulp.dest('./dist/css'));
+});
+
 gulp.task('js', function() {
-	return gulp.src(['./app/js/*.js'], ['!./app/js/concat.js'])
-	.pipe(concat('concat.js'))
-	.pipe(gulp.dest('./app/js'))
+	return gulp.src('./app/js/*.js')
+	.pipe(uglify())
+	.pipe(gulp.dest('./dist/js'))
 });
 
 gulp.task('sass', function () {  
@@ -71,7 +92,7 @@ gulp.task('serve', ['build'], function() {
   });
 });
 
-gulp.task('build', ['js', 'sass', 'pug', 'copy-assets'], function (cb) {
+gulp.task('build', ['js', 'sass', 'pug', 'copy-assets', 'concat-minified-js', 'concat-minified-css'], function (cb) {
   cb();
 });
 
