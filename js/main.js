@@ -1,0 +1,1 @@
+var element=$("svg").addClass("run-animation");element.hover(function(){},function(e){e.preventDefault,element.removeClass("run-animation"),setTimeout(function(){element.addClass("run-animation")},10)});
