@@ -43,9 +43,21 @@ body
     background-color: rgba(255,255,255,.8)
 
 img.avatar
-  border-radius: 3px;
+  border-radius: 4px;
   float: left;
   margin-right: 30px;
+  
+a.svg
+  position: relative;
+  display: inline-block;
+
+  &:after
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+
 
 @-webkit-keyframes spinner 
   from 
@@ -65,8 +77,10 @@ img.avatar
     -ms-transform: rotateY(-360deg);
     transform: rotateY(-360deg);
     
-  
 svg
+  margin: .5em;
+    
+svg.run-animation
   -webkit-animation-name: spinner;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -85,6 +99,6 @@ svg
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 
-svg:hover
-  -webkit-animation-play-state: running;
-  animation-play-state: running;
+  &:hover
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
