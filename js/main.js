@@ -1,1 +1,1 @@
-var element=$("svg").addClass("run-animation");element.hover(function(){},function(e){e.preventDefault,element.removeClass("run-animation"),setTimeout(function(){element.addClass("run-animation")},10)});
+var element=$("svg").addClass("run-animation");element.mouseout(function(e){e.preventDefault,console.dir(e.target);var t=$(e.target).is("svg")?$(e.target):$(e.target).parent("svg");console.dir(t[0]),t.removeClass("run-animation"),setTimeout(function(){$(t).addClass("run-animation")},100)});
