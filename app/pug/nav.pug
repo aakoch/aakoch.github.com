@@ -1,16 +1,15 @@
 mixin nav           
   nav.navbar.navbar-light.bg-faded
-    button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#navbar-header', aria-controls='navbar-header')
-    #navbar-header.collapse.navbar-toggleable-xs
-      a.navbar-brand(href='#') 
+    #navbar-header.collapse.navbar-toggleable-xs.in
+      a.navbar-brand(href='#Home') 
       ul.nav.navbar-nav
         li.nav-item.active
-          a.nav-link(href='#')
+          a.nav-link(href='#Home')
             | Home 
             span.sr-only (current)
         li.nav-item
-          a.nav-link(href='skill.html') Skills
+          a.nav-link(href='#skills') Skills
         li.nav-item
-          a.nav-link(href='experience.html') Experience
+          a.nav-link(href='#experience') Experience
         li.nav-item
-          a.nav-link(href='training.html') Training
+          a.nav-link(href='#training') Training
