@@ -1,14 +1,10 @@
 extends ./base.pug
-include ./header
-include ./footer
 include ./nav
 include ./history
 include ./vcard
 include ./skills
 
 block content
-  +header
-          
   div
     +nav
     .tab-content.container
@@ -33,4 +29,3 @@ block content
             p The book 
               a(href="http://amzn.to/1OmEcv2") Clean Code by "Uncle" Robert Martin 
               | changed my life.       
-  +footer
