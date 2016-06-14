@@ -1,5 +1,6 @@
 address.vcard {
-  font-style: normal; }
+  font-style: normal;
+  margin: 2em; }
 
 .vcard .fn {
   font-size: 2em; }
@@ -88,3 +89,12 @@ li.experience.vevent.position {
     display: block; }
     li.experience.vevent.position span.jobtitle {
       font-weight: bold; }
+
+div.iconcredit {
+  font-size: .5em;
+  margin: 2em; }
+
+.nav-tabs {
+  border-bottom: 0; }
+  .nav-tabs li.active > a:hover, .nav-tabs li > a:hover {
+    border-bottom: 0; }
