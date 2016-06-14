@@ -3,6 +3,7 @@ include ./footer
 include ./nav
 include ./history
 include ./vcard
+include ./skills
 
 block content
   div(style="margin:.4em 2em .8em")
@@ -30,15 +31,19 @@ block content
           
   div
     +nav
-    div.tab-content.container
-      div.tab-pane.active(id="home" role="tabpanel")
+    .tab-content.container
+      .tab-pane.active(id="home" role="tabpanel")
         h2 Welcome
-        quote “We must be willing to let go of the life we planned so as to have the life that is waiting for us.” -- Joseph Campbell
-        +vcard
-      div.tab-pane(id="skills" role="tabpanel")
-        h2 Skills
-        canvas(id="myChart" width="500" height="300")
-      div.tab-pane(id="experience" role="tabpanel")
+        .row
+          div.col-md-8 Adam is a software developer and has been programming since Basic.
+          div.col-md-4
+            quote “We must be willing to let go of the life we planned so as to have the life that is waiting for us.” -- Joseph Campbell
+        .row
+          div.col-md-4
+            +vcard
+      .tab-pane(id="skills" role="tabpanel")
+        +skills
+      .tab-pane(id="experience" role="tabpanel")
         h2 Experience
         +history
 //-      div.tab-pane(id="training" role="tabpanel")
