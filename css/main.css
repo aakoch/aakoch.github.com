@@ -79,3 +79,12 @@ svg.run-animation {
   svg.run-animation:hover {
     -webkit-animation-play-state: running;
     animation-play-state: running; }
+
+li.experience.vevent.position {
+  list-style: none;
+  display: block;
+  margin: 1em; }
+  li.experience.vevent.position span {
+    display: block; }
+    li.experience.vevent.position span.jobtitle {
+      font-weight: bold; }
