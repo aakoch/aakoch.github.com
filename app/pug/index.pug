@@ -30,10 +30,13 @@ block content
           
   .container
     +nav
-    .jumbotron
-      div
+    div.tab-content
+      div.tab-pane.active(id="home" role="tabpanel")
+      div.tab-pane(id="skills" role="tabpanel")
         canvas(id="myChart" width="500" height="300")
-      +history
-      div View the source for this on 
+      div.tab-pane(id="experience" role="tabpanel")
+        +history
+      div.tab-pane(id="training" role="tabpanel")
+    div View the source for this on 
           a(href="https://github.com/aakoch/aakoch.github.com") GitHub
     +footer
