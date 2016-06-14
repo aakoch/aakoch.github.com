@@ -1,16 +1,13 @@
 mixin nav           
-  nav.navbar.navbar-light.bg-faded
-    #navbar-header.collapse.navbar-toggleable-xs.in
-      a.navbar-brand(href='#Home') 
-      ul.nav.nav-tabs(role="tablist")
-        li.active(role="presentation")
-          a(href='#Home' role="tab" data-toggle="tab")
-            | Home 
-            span.sr-only (current)
-        li
-          a(href='#skills' role="tab" data-toggle="tab") Skills
-        li
-          a(href='#experience' role="tab" data-toggle="tab") Experience
-        li
-          a(href='#training' role="tab" data-toggle="tab") Training
+  ul.nav.nav-tabs(role="tablist")
+    li.active(role="presentation")
+      a(href='#home' role="tab" data-toggle="tab")
+        | Home 
+        span.sr-only (current)
+    li
+      a(href='#skills' role="tab" data-toggle="tab") Skills
+    li
+      a(href='#experience' role="tab" data-toggle="tab") Experience
+//-    li
+//-      a(href='#training' role="tab" data-toggle="tab") Training
           
