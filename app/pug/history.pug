@@ -1,37 +1,56 @@
 mixin history
-  ol.vcalendar
+
+  - 
+    var positions = 
+      [
+        { 
+          title: 'Systems Engineer', 
+          company: 'Union Pacific Railroad', 
+          start: 'September 2013', 
+          end: 'present',
+          tasks: [
+            'Technical Lead for User Experience team',
+            'Implemented and maintained new version of heaviest-hit customer-facing application',
+            'Lead code reviews',
+            'Set programming standards and best-practices',
+            'Developed customer-facing Angular application',
+            'Taught Java fundamentals to new developers'
+          ]
+        },
+        { 
+          title: 'Associate Systems Engineer', 
+          company: 'Union Pacific Railroad', 
+          start: 'April 2011', 
+          end: 'September 2013',
+          tasks: [
+            'Wrote back-end Java code using frameworks such as Spring, Hibernate, Ehcache and Quartz',
+            'Created front-end pages with Wicket and custom JavaScript using jQuery',
+            'Lead installation of code quality and code review tools',
+            'Planned and estimated projects and sprints using Agile methodology and VersionOne',
+            'Worked with customers to assemble requirements, receive feedback, and ensure satisfaction',
+            'Managed on- and off-shore developers by assigning work and daily phone conversations'
+          ]
+        }
+      ]
+  
+  ul.vcalendar
+    each position, index in positions
+      li.experience.vevent.position
+        //if position.title.indexOf(prevTitle) < 0
+        - var prevTitle = position.title
+        span.summary.jobtitle= position.title
+        span.location.employer= position.company
+        abbr.dtstart= position.start 
+        | - 
+        abbr.dtend= position.end
+        ul
+          each task in position.tasks
+            li= task
+
     li.experience.vevent.position
-      span.summary.jobtitle Systems Engineer
+      span.summary.jobtitle Senior Project Engineer
       span.location.employer Union Pacific Railroad
-      abbr.dtstart(title="2000-03-20") March 2000 - 
-      abbr.dtend(title="present") present
-    ul
-      li Technical Lead for User Experience team
-      li Implemented and maintained new version of heaviest-hit customer-facing application
-      li Lead code reviews
-      li Set programming standards and best-practices
-      li Developed Angular application
-      li Taught Java fundamentals to new developers
-      
-    li.experience.vevent.position
-      span.summary.jobtitle Associate Systems Engineer
-      span.location.employer Union Pacific Railroad
-      abbr.dtstart April 2011 - 
-      abbr.dtend September 2013
-    ul
-      li Wrote back-end Java code using frameworks such as Spring, Hibernate, Ehcache and Quartz
-      li Created front-end pages with Wicket and custom JavaScript using jQuery
-      li Lead installation of code quality and code review tools
-      li Planned and estimated projects and sprints using Agile methodology and VersionOne
-      li Worked with customers to assemble requirements, receive feedback, and ensure satisfaction
-      li Managed on- and off-shore developers by assigning work and daily phone conversations 
-      
-      
-      
-    li.experience.vevent.position
-      span.summary.jobtitle Project Engineer
-      span.location.employer Union Pacific Railroad
-      abbr.dtstart July 2005 - 
+      abbr.dtstart July 2009 - 
       abbr.dtend April 2011
     ul
       li Designed and created job-centric portals using Oracle Portal with other business areas
@@ -41,8 +60,16 @@ mixin history
       li Received feedback from field employees and updated portals as required
       li Managed on- and off-shore developers including assigning work and daily video-conferences
       li Worked with teams to evaluate company software purchases 
-      
-      
+
+
+    li.experience.vevent.position
+      span.summary.jobtitle Project Engineer
+      span.location.employer Union Pacific Railroad
+      abbr.dtstart July 2005 - 
+      abbr.dtend July 2009
+    p see Senior Project Engineer
+
+
     li.experience.vevent.position
       span.summary.jobtitle Senior Application Developer
       span.location.employer Union Pacific Railroad
@@ -54,8 +81,8 @@ mixin history
       li Update and maintain said application constantly helping customers with new requirements
       li Worked with customers to assemble requirements, receive feedback, and ensure satisfaction
       li Provided input on front-end Java frameworks to be used company-wide
-      
-      
+
+
     li.experience.vevent.position
       span.summary.jobtitle Application Developer
       span.location.employer Union Pacific Railroad
