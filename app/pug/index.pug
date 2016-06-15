@@ -3,6 +3,7 @@ include ./nav
 include ./history
 include ./vcard
 include ./skills
+include ./projects
 
 block content
   div
@@ -29,3 +30,6 @@ block content
             p The book 
               a(href="http://amzn.to/1OmEcv2") Clean Code by "Uncle" Robert Martin 
               | changed my life.       
+      .tab-pane(id="projects" role="tabpanel")
+        h2 Projects
+        +projects
