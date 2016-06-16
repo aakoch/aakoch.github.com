@@ -132,13 +132,14 @@ data = [{
     "SQL": 2,
     "Javascript": 10
 }];
-var ctx = $("#myChart");
+var ctx = $("#majorLanguages");
 
 var newData = {
     'Java': [0,0,0,0,0,0,.5,.5,.5,.6,.7,.8,.9,1,2,3,4,5,6,7,8,9,10,11,12],
     'Javascript': _.range(0, 21, .9),
     'SQL': _.map(_.range(0, 20, .2), function(n) { return Math.round(n * 10) / 10; }),
-    'Visual Basic': [0,0,0,0,0,0,1,2,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5]
+    'Visual Basic': [0,0,0,0,0,0,1,2,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
+    'PHP': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,4,5,5]
 };
 
 var defaults = {
@@ -175,7 +176,7 @@ var colors = {
   gray : Color("#828792")
 }
 
-var chartColors = colors.green.fiveToneBScheme();
+var chartColors = colors.green.fiveToneCScheme();
 
 
 datasets.push(_.extend({
@@ -201,6 +202,12 @@ datasets.push(_.extend({
     data: newData['Visual Basic'],
   borderColor: chartColors[3].toString(),
   backgroundColor: chartColors[3].setAlpha(.4).toString()
+}, defaults));
+datasets.push(_.extend({
+    label: 'PHP',
+    data: newData['PHP'],
+  borderColor: chartColors[4].toString(),
+  backgroundColor: chartColors[4].setAlpha(.4).toString()
 }, defaults));
 
 
