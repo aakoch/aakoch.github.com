@@ -1,4 +1,3 @@
-
 //// First lets create our drawing surface out of existing SVG element
 //// If you want to create new surface just provide dimensions
 //// like s = Snap(800, 600);
@@ -35,195 +34,197 @@
 ////    }, 1000);
 ////  }, 1000);
 ////});
-data = [
-  {
+var skillsData = [{
+    "year": 1995,
+    "languages": [{
+        "name": "Java",
+        "percentUsed": 0.1
+    }],
+    "applications": [{
+        "name": "Homesite",
+        "percentUsed": 0.1
+    }]
+}];
+
+data = [{
     "Date": 1995,
     "Java": 0,
     "SQL": 0,
     "Javascript": 0.5
-  },
-  {
+}, {
     "Date": 1996,
     "Java": 0,
     "SQL": 0,
     "Javascript": 0.5
-  },
-  {
+}, {
     "Date": 1997,
     "Java": 0,
     "SQL": 0,
     "Javascript": 0.5
-  },
-  {
+}, {
     "Date": 1998,
     "Java": 0.1,
     "SQL": 0,
     "Javascript": 0.5
-  },
-  {
+}, {
     "Date": 1999,
     "Java": 1,
     "SQL": 0,
     "Javascript": 0.5
-  },
-  {
+}, {
     "Date": 2000,
     "Java": 0.1,
     "SQL": 0,
     "Javascript": 0.5
-  },
-  {
+}, {
     "Date": 2001,
     "Java": 0,
     "SQL": 0,
     "Javascript": 0.5
-  },
-  {
+}, {
     "Date": 2002,
     "Java": 0,
     "SQL": 0,
     "Javascript": 0.5
-  },
-  {
+}, {
     "Date": 2003,
     "Java": 2,
     "SQL": 2,
     "Javascript": 0.5
-  },
-  {
+}, {
     "Date": 2004,
     "Java": 3,
     "SQL": 3,
     "Javascript": 0.5
-  },
-  {
+}, {
     "Date": 2005,
     "Java": 4,
     "SQL": 4,
     "Javascript": 1
-  },
-  {
+}, {
     "Date": 2006,
     "Java": 5,
     "SQL": 5,
     "Javascript": 2
-  },
-  {
+}, {
     "Date": 2007,
     "Java": 6,
     "SQL": 4,
     "Javascript": 3
-  },
-  {
+}, {
     "Date": 2008,
     "Java": 7,
     "SQL": 3,
     "Javascript": 4
-  },
-  {
+}, {
     "Date": 2009,
     "Java": 8,
     "SQL": 2,
     "Javascript": 6
-  },
-  {
+}, {
     "Date": 2010,
     "Java": 9,
     "SQL": 1,
     "Javascript": 8
-  },
-  {
+}, {
     "Date": 2011,
     "Java": 10,
     "SQL": 2,
     "Javascript": 10
-  }
-];
+}];
 var ctx = $("#myChart");
+
+var newData = {
+    'Java': [0,0,0,0,0,0,.5,.5,.5,.6,.7,.8,.9,1,2,3,4,5,6,7,8,9,10,11,12],
+    'Javascript': _.range(0, 21, .9),
+    'SQL': _.map(_.range(0, 20, .2), function(n) { return Math.round(n * 10) / 10; }),
+    'Visual Basic': [0,0,0,0,0,0,1,2,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5]
+};
+
+var defaults = {
+    fill: false,
+    lineTension: 0.1,
+    borderCapStyle: 'butt',
+    borderDash: [],
+    borderDashOffset: 0.0,
+    borderJoinStyle: 'miter',
+    pointBackgroundColor: "#fff",
+    pointBorderWidth: 1,
+    pointHoverRadius: 5,
+    pointHoverBorderWidth: 2,
+    pointRadius: 1,
+    pointHitRadius: 10,
+    stepSize: 1
+};
+var datasets = [];
+
+
+
+//$green: #378087;
+//$offWhite: #E8E8EB;
+//$lightBlue: #A9C5E1;
+//$darkBlue: #253551;
+//$gray: #828792;
+
+var Color = net.brehaut.Color;
+var colors = {
+  green : Color("#378087"),
+  offWhite : Color("#E8E8EB"), 
+  lightBlue : Color("#A9C5E1"),
+  darkBlue : Color("#253551"),
+  gray : Color("#828792")
+}
+
+var chartColors = colors.green.fiveToneBScheme();
+
+
+datasets.push(_.extend({
+    label: 'Java',
+    data: newData.Java,
+  borderColor: chartColors[0].toString(),
+  backgroundColor: chartColors[0].setAlpha(.4).toString()
+}, defaults));
+datasets.push(_.extend({
+    label: 'Javascript',
+    data: newData.Javascript,
+  borderColor: chartColors[1].toString(),
+  backgroundColor: chartColors[1].setAlpha(.4).toString()
+}, defaults));
+datasets.push(_.extend({
+    label: 'SQL',
+    data: newData.SQL,
+  borderColor: chartColors[2].toString(),
+  backgroundColor: chartColors[2].setAlpha(.4).toString()
+}, defaults));
+datasets.push(_.extend({
+    label: 'Visual Basic',
+    data: newData['Visual Basic'],
+  borderColor: chartColors[3].toString(),
+  backgroundColor: chartColors[3].setAlpha(.4).toString()
+}, defaults));
+
+
+
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: _.pluck(data, 'Date'),
-        datasets: [{
-            label: 'Java',
-            data: _.pluck(data, 'Java'),
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(75,192,192,0.4)",
-            borderColor: "rgba(75,192,192,1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(75,192,192,1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: "rgba(75,192,192,1)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 2,
-            pointRadius: 1,
-            pointHitRadius: 10,
-            stepSize: 1
-        },
-         {
-            label: 'Javascript',
-            data: _.pluck(data, 'Javascript'),
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(75, 89, 192,0.4)",
-            borderColor: "rgb(75, 89, 192)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(75, 89, 192,1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: "rgba(75, 89, 192,1)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 2,
-            pointRadius: 1,
-            pointHitRadius: 10,
-            stepSize: 1
-        },
-         {
-            label: 'SQL',
-            data: _.pluck(data, 'SQL'),
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(75, 192, 102,0.4)",
-            borderColor: "rgb(75, 192, 102)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(75, 192, 102,1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: "rgba(75, 192, 102,1)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 2,
-            pointRadius: 1,
-            pointHitRadius: 10,
-            stepSize: 1
-        }]
+        labels: _.range(1995, 2017),
+        datasets: datasets
     },
     options: {
-      title: {
-        display: true,
-        text: 'Years of Experience (fake data for now)'
-      },
+        title: {
+            display: true,
+            text: 'Years of Experience (fake data for now)'
+        },
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero:true
+                    beginAtZero: true,
+                  max: 20
                 }
             }]
         },
-      responsive: false,
-      maintainAspectRatio: true
+        responsive: true,
+        maintainAspectRatio: true
     }
 });

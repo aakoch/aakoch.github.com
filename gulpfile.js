@@ -48,6 +48,7 @@ gulp.task('copy-backup-jquery', function() {
 gulp.task('concat-minified-js', function() {
   return gulp.src(['./node_modules/tether/dist/js/tether.min.js',
                    './app/assets/js/ie10-viewport-bug-workaround.js',
+                   './app/assets/js/color.js',
                   './node_modules/bootstrap/dist/js/bootstrap.min.js',
                   './node_modules/chart.js/dist/Chart.min.js',
                   './node_modules/snapsvg/dist/snap.svg-min.js',
