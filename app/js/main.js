@@ -135,15 +135,15 @@ data = [{
 var ctx = $("#majorLanguages");
 
 var newData = {
-    'Java': [0,0,0,0,0,0,.5,.5,.5,.6,.7,.8,.9,1,2,3,4,5,6,7,8,9,10,11,12],
-    'Javascript': _.range(0, 21, .9),
-    'SQL': _.map(_.range(0, 20, .2), function(n) { return Math.round(n * 10) / 10; }),
-    'Visual Basic': [0,0,0,0,0,0,1,2,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
-    'PHP': [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,4,5,5]
+    'Java': [0,.5,.5,.5,.6,.7,.8,.9,1,2,3,4,5,6,7,8,9,10,11,12],
+    'Javascript': [5,.5,.5,.6,.7,.8,.9,1,2,3,4,5,6,7,8,9,10,11,12],
+    'SQL': _.map(_.range(0, 15, .2), function(n) { return Math.round(n * 10) / 10; }),
+    'Visual Basic': [0,1,2,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
+    'PHP': [0,0,0,0,0,0,0,0,0,1,2,3,4,5,5]
 };
 
 var defaults = {
-    fill: false,
+    fill: true,
     lineTension: 0.1,
     borderCapStyle: 'butt',
     borderDash: [],
@@ -212,10 +212,10 @@ datasets.push(_.extend({
 
 
 
-var myChart = new Chart(ctx, {
+var majorLanguages = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: _.range(1995, 2017),
+        labels: _.range(2000, 2017),
         datasets: datasets
     },
     options: {
@@ -227,7 +227,7 @@ var myChart = new Chart(ctx, {
             yAxes: [{
                 ticks: {
                     beginAtZero: true,
-                  max: 20
+                    max: 16
                 }
             }]
         },
