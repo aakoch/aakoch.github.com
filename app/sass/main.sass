@@ -129,3 +129,20 @@ div.iconcredit
   border-bottom: 0;
   li.active > a:hover, li > a:hover
     border-bottom: 0;
+    
+.quote
+  > *
+    text-indent: 2em;
+    margin-right: 1em;
+  &::after, &::before
+    color: gray;
+    font-size: 4em;
+    font-family: sans-serif;
+    position: absolute;
+  &::before
+    content: "“";
+    top: -.5em;
+  &::after
+    content: "”";
+    right: .5em;
+    bottom: -.5em;
