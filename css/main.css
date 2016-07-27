@@ -1,3 +1,4 @@
+@charset "UTF-8";
 address.vcard {
   font-style: normal; }
 
@@ -97,3 +98,22 @@ div.iconcredit {
   border-bottom: 0; }
   .nav-tabs li.active > a:hover, .nav-tabs li > a:hover {
     border-bottom: 0; }
+
+.quote > * {
+  text-indent: 2em;
+  margin-right: 1em; }
+
+.quote::after, .quote::before {
+  color: gray;
+  font-size: 4em;
+  font-family: sans-serif;
+  position: absolute; }
+
+.quote::before {
+  content: "“";
+  top: -.5em; }
+
+.quote::after {
+  content: "”";
+  right: .5em;
+  bottom: -.5em; }
