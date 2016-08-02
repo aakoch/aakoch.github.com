@@ -9,12 +9,12 @@ mixin history
           start: 'September 2013', 
           end: 'present',
           tasks: [
-            'Technical Lead for User Experience team',
-            'Implemented and maintained new version of heaviest-hit customer-facing application',
-            'Lead code reviews',
-            'Set programming standards and best-practices',
-            'Developed customer-facing Angular application',
-            'Taught Java fundamentals to new developers'
+            'Technical Lead for Customer Experience team which involved leading code reviews, setting programming standards and best-practices',
+            'Implemented and maintains heaviest-hit customer-facing application with 1 million hits per month',
+            'Created project for proof of concept use of Angular at Union Pacific and developed one of the first customer-facing Angular applications',
+            'Piloted JIRA as ticketing tool which lead to the adoption of it',
+            'Teaches Java fundamentals class to newly-hired developers',
+            'Created and maintained Kanban board for the tracking of enhancements and defects'
           ]
         },
         { 
@@ -23,12 +23,93 @@ mixin history
           start: 'April 2011', 
           end: 'September 2013',
           tasks: [
+            'Used Agile methodologies including sprint planning and backlog creation',
             'Wrote back-end Java code using frameworks such as Spring, Hibernate, Ehcache and Quartz',
             'Created front-end pages with Wicket and custom JavaScript using jQuery',
-            'Lead installation of code quality and code review tools',
+            'Initiated use of code quality (SonarQube) and code review (Crucible) tools',
             'Planned and estimated projects and sprints using Agile methodology and VersionOne',
             'Worked with customers to assemble requirements, receive feedback, and ensure satisfaction',
-            'Managed on- and off-shore developers by assigning work and daily phone conversations'
+            'Created map portlet (GIS) and converted old portlets for use in Liferay portal'
+          ]
+        },
+        { 
+          title: 'Senior Project Engineer', 
+          company: 'Union Pacific Railroad', 
+          start: 'July 2009', 
+          end: 'April 2011',
+          tasks: [
+            'Designed and created job-centric portals using Oracle Portal with other business areas',
+            'Designed and developed front-end using JPDK portlets, the jQuery framework and AJAX',
+            'Maintained code through JSLint and JSUnit testing',
+            'Received feedback from field employees and updated portals as required'
+          ]
+        },
+        { 
+          title: 'Project Engineer', 
+          company: 'Union Pacific Railroad', 
+          start: 'July 2005', 
+          end: 'July 2009',
+          tasks: [
+            'Primary developer of employee portal used by entire operations workforce of around 11,000',
+            'Integrated into Oracle Portal different technologies including messaging, proxying and HTTP',
+            'Designed and developed front-end using JPDK portlets, the jQuery framework and AJAX',
+            'Maintained code through JSLint and JSUnit testing',
+            'Managed on- and off-shore developers including assigning work and daily video-conferences',
+            'Worked with Human Factors team to design user-friendly interfaces'
+          ]
+        },
+        { 
+          title: 'Senior Application Developer', 
+          company: 'Union Pacific Railroad', 
+          start: 'April 2002', 
+          end: 'July 2005',
+          tasks: [
+            'Worked with customers on design of new web-based application for simulation of cost saving routes for cargo',
+            'Implemented said application using emerging and established technologies including Java Enterprise Edition (J2EE), EJB, Weblogic, JMS with TIBCO, JSTL and JSP',
+            'Provided input on front-end Java frameworks to be used company-wide'
+          ]
+        },
+        { 
+          title: 'Application Developer', 
+          company: 'Union Pacific Railroad', 
+          start: 'January 2001', 
+          end: 'April 2002',
+          tasks: [
+            'Maintained Visual Basic app used in the forecast of business with downstream integration into other systems like asset management',
+            'Designed, developed and tested graphical user interface for new customer requests',
+            'Wrote and maintained stored procedures'
+          ]
+        },
+        { 
+          title: 'Associate Application Developer', 
+          company: 'Union Pacific Railroad', 
+          start: 'March 2000', 
+          end: 'January 2001',
+          tasks: [
+            'Increased productivity with automated Excel spreadsheets',
+            'Designed, developed and tested forecasting tool with Excel spreadsheets'
+          ]
+        },
+        { 
+          title: 'Contractor', 
+          company: 'Paradigm Solutions', 
+          start: 'August 2000', 
+          end: 'June 2001',
+          tasks: [
+            'Converted legacy Visual Basic code to MS SQL Server stored procedures',
+            'Supported web site with new Javascript code'
+          ]
+        },
+        { 
+          title: 'System Test Engineer', 
+          company: 'Lucent Technologies', 
+          start: 'June 1999', 
+          end: 'November 1999',
+          tasks: [
+            'Physically tested prototype fiber optic transmission blades including inserting and removing blades from rack to rack and rewiring with optical cable',
+            'Troubleshot possible causes for test failures',
+            'Created and maintained test plans',
+            'Automated testing with scripts and thus increasing productivity'
           ]
         }
       ]
@@ -49,68 +130,6 @@ mixin history
               each task in position.tasks
                 li= task
 
-        li.experience.vevent.position
-          span.summary.jobtitle Senior Project Engineer
-          span.location.employer Union Pacific Railroad
-          abbr.dtstart July 2009 - 
-          abbr.dtend April 2011
-        ul
-          li Designed and created job-centric portals using Oracle Portal with other business areas
-          li Designed and developed front-end using JPDK portlets, the jQuery framework and AJAX
-          li Maintained code through JSLint and JSUnit testing
-          li Minimized size of JavaScript and CSS with compression tools
-          li Received feedback from field employees and updated portals as required
-          li Managed on- and off-shore developers including assigning work and daily video-conferences
-          li Worked with teams to evaluate company software purchases 
-
-
-        li.experience.vevent.position
-          span.summary.jobtitle Project Engineer
-          span.location.employer Union Pacific Railroad
-          abbr.dtstart July 2005 - 
-          abbr.dtend July 2009
-        p see Senior Project Engineer
-
-
-        li.experience.vevent.position
-          span.summary.jobtitle Senior Application Developer
-          span.location.employer Union Pacific Railroad
-          abbr.dtstart April 2002 - 
-          abbr.dtend July 2005
-        ul
-          li Worked with customers on design of new web-based application for simulation of cost saving routes for cargo
-          li Implemented said application using emerging and established technologies including Java Enterprise Edition (J2EE), EJB, Weblogic, JSP, JMS with TIBCO, JSTL and Oracle
-          li Update and maintain said application constantly helping customers with new requirements
-          li Worked with customers to assemble requirements, receive feedback, and ensure satisfaction
-          li Provided input on front-end Java frameworks to be used company-wide
-
-
-        li.experience.vevent.position
-          span.summary.jobtitle Application Developer
-          span.location.employer Union Pacific Railroad
-          abbr.dtstart January 2001 - 
-          abbr.dtend April 2002
-        ul
-          li Maintained, updated and supported Visual Basic application used for business forecasting
-          li Worked with customers to assemble requirements, receive feedback and ensure satisfaction
-
-        li.experience.vevent.position
-          span.summary.jobtitle Associate Application Developer
-          span.location.employer Union Pacific Railroad
-          abbr.dtstart March 2000 - 
-          abbr.dtend January 2001
-        ul
-          li Maintained, updated and supported Visual Basic application used for business forecasting
-          li Worked with customers to assemble requirements, receive feedback and ensure satisfaction
-
-        li.experience.vevent.position
-          span.summary.jobtitle Contractor
-          span.location.employer Paradigm Solutions
-          abbr.dtstart August 2000 - 
-          abbr.dtend June 2001
-        ul
-          li Converted legacy Visual Basic code to MS SQL Server stored procedures
-          li Supported web site with new Javascript code
     .col-md-4
       .quote
         p Adam has a strong and diverse technical skill set. He is passionate and able to learn new technology with ease.
