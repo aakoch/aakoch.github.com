@@ -1,0 +1,101 @@
+[{
+	"year": 2000,
+	"manager": "John Chekal",
+	"director": "Jim H. Fuller",
+	"AVP/VP": "Phil Seifert",
+	"responsibilities": [{
+		"description": "Support Prophecy & Misc CMR",
+		"tasks": ["Learning Prophecy form both a technical and a functional perspective",
+		"Created and automated Excel Workbooks for CMR",
+		"Develop, test, & implement importing and exporting of forecasts with spreadsheets",
+		"Develop, test, & implement opportunity data base",
+		"Forecast Accuracy. VB component",
+		"Knocked out Prophecy 'Issues List'",
+		"Prophecy maintenance & support",
+		"Technical training for 2001 development"]
+	},
+	{
+		"description": "Additional Prophecy & CMR",
+		"tasks": ["Create fully versioned & fully documented Prophecy System with documentation in ASK",
+		"Convert Prophecy from VB5 to VB6 & upgrade 3rd party tools",
+		"Sync up with change control group",
+		"Ongoing Prophecy support and maintainence",
+		"Enhance understanding of overall application"]
+	}],
+	"comments": ["Solid and consistent performer",
+	"Good value system and strong work ethic",
+	"Excellent technical aptitude",
+	"Customer focused",
+	"Learns quickly"]
+},
+{
+	"year": 2001,
+	"mid-year": true,
+	"responsibilities": [
+		{
+		"description": "Ongoing Prophecy Support",
+		"tasks": [
+			"Ongoing programming support and maintainence",
+			"Elective enhancements",
+			"Customer Consultation"
+		]
+		},
+		{
+		"description": "CSPA Contribution",
+		"tasks": [
+			"Stage 1 Support",
+			"Stage 2 Support",
+			"Technical Environment ResearcH",
+			"Traffic Selection Research & Design"
+		]
+		}
+	],
+	"comments": [
+		"Strengths: Technical Skills & Technical Aptitude",
+		"Solid new age technical skill set, and good technical aptitude.",
+		"A conscientious contributor",
+		"Works well with customers",
+		"Limited business knowledge",
+		"Nees to seize opportunity to take on broader role",
+		"Wants to contribute",
+		"A good resource with excellent long term potential"
+	]
+},
+{
+	"year": 2005,
+	"manager": "John Chekal",
+	"director": "Martin J. Malley",
+	"AVP/VP": "Jeff Young",
+  "status": "pending",
+	"responsibilities": [
+		{
+		"description": "Hands on NSP development and support",
+		"tasks": ["Ongoing tuning and enhancement of traffic selection, saving, and management", "Ongoing tuning and enhancement of scenario management", 'Reports: Ongoing tuning of existing reports', "Reports: Development of new reports", "Reports: Continued development of various drill down/in capabilities", "Ongoing tuning and enhancement of single trip", "Development of new features related analysis, reports, and financial impact analysis", "NSP queue of enhancements", "Provide customer consultation and support", "Technical support related to IT Infrastructure initiatives", "System Maintenance"]
+		},
+
+		{
+		"description": "Hands on Propehcy development/mainenance support. Miscellaneous ongoing fixes, enhancements, and maintainence",
+		"tasks": ["Enhancements - Misc fine tuning", "Maintenance - Misc ongoing system COQ maintenance", "Support - Technical and analytic support for customers"]
+		}
+	]
+},
+ {
+	"year": 2005,
+	"manager": "John Chekal",
+	"director": "Martin J. Malley",
+	"AVP/VP": "Jeff Young",
+   "status": "draft",
+	"responsibilities": [
+		{
+		"description": "NSP - To work on the Network Schedule Planner (NSP) system by enhancing, fixing and maintaining the application as required. This includes hands-on programming of the Weblogic environment and the Unix NSP server",
+		"tasks": ["Work on the fixes/enhancements listed in the NSP Discussion Database", "Enhance Car Scheduling engine to allow the scheduling of multiple scenarios", "Complete the graphical display (GIS) of car routes by the end of July", "Build a web service capable of handling a large (but undetermined) number of requests by the end of 2006", "Create standard process for \"special studies\"", "Generate train statistics from scenario (if decided to implement)", "Integrate equipment handling rules (if decided to implement)", "Tune application for quicker responses, specifically page displays and reports", "Take over Service Matrix (SM) responsibilities from Mark Mordeson", "Process automation: Automate loads of database and lookup-ups. Automate mainenance on ?? files", "Update NSP as required for any Infrastructure initiatives", "Keep all areas of deployment (development, test, and production) up-to-date and running" "Monitor the production environment for potential problems", "Provide time and services for any group that wishes to do a \"special study\"", "Support the customers with any issues or enhancements", "Provide information or support to other groups"]
+		},
+
+		{
+		"description": "Prophecy",
+		"tasks": ["Enhance the application(s) per user requests, including ability to manually set the vintage id for the \"Revision\" vintage when rebuilding the summary table", "Coordinate efforts to deploy new versions of Prophecy to the users", "Migrate away from 3rd party controls to more standard Microsoft controls", "Enhance import feature to display more user feedback",  "Help with the deployment of SAS and with the integation of SAS with Prophecy", "[More to do]"]
+		}
+	]
+ }
+
+]

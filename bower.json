@@ -1,16 +1,9 @@
 {
-  "name": "aakochs GitHub page",
-  "description": "",
-  "main": "",
-  "keywords": [
-    "Static",
-    "generator"
-  ],
-  "author": "",
-  "license": "",
-  "homepage": "",
-  "private": true,
-  "dependencies": {
-    "jQuery": "~2.2.0"
-  }
+    "name": "aakoch",
+    "version": "1.0.0",
+    "main": "app/index.html",
+    "dependencies": {
+        "bootstrap": "latest"
+    },
+    "appPath": "app"
 }

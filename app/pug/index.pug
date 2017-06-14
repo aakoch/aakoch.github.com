@@ -1,14 +1,56 @@
 extends ./base.pug
 include ./nav
-include ./vcard
 include ./history
+include ./vcard
+include ./projects
 
 block content
-    .container
-        +nav
-        .main
-          image.avatar(src='images/motel.png')
-          +vcard
-          +history
-        div View the source for this on 
-            a(href="https://github.com/aakoch/aakoch.github.com") GitHub
+  div
+    +nav
+    .tab-content.container
+      .tab-pane.active(id="home" role="tabpanel")
+        h2 Welcome
+        .row
+          .col-md-8 
+            p Adam is a software developer programming since Basic.
+            p Experienced designer and full-stack developer of systems and applications from front-end user interfaces to back-end database designs. 
+            p Passionate about clean code.
+
+            h3 Areas of Expertise
+            h4 Front-end
+            p Responsive applications designed for both mobile and desktop
+            ul
+              li Javascript with Angular, jQuery, YUI, Underscore and more
+              li CSS3 responsive design with layout frameworks Foundation, HTML5 Boilerplate, YUI
+              li HTML5 with Jade (now Pug)
+              li RESTful services
+            h4 Back-end
+            p Designed and developed applications that provide a backend to web applications that communicates with JMS and RESTful services and databases
+            ul
+              li Mostly Java but knows PHP and has dabbled in C++, Ruby and some other JVM languages
+              li Spring Framework
+              li Database design using Oracle, MySQL and SQL Server
+            h4 Application Lifecycle
+            ul 
+              li Agile and Kanban methodologies with Quality Center, VersionOne and JIRA
+              li Build tools Gradle, Grunt, Gulp, Maven and Ant
+              li Source control management tools Git and Subversion
+
+          .col-md-4
+            quote “We must be willing to let go of the life we planned so as to have the life that is waiting for us.” -- Joseph Campbell
+        .row
+          .col-md-8
+          .col-md-4
+            +vcard
+      .tab-pane(id="skills" role="tabpanel")
+        include ./skills.pug
+      .tab-pane(id="experience" role="tabpanel")
+        h2 Experience
+        +history
+      .tab-pane(id="passions" role="tabpanel")
+        include passions.pug
+      .tab-pane(id="projects" role="tabpanel")
+        h2 Projects
+        +projects
+      .tab-pane(id="hobbies" role="tabpanel")
+        include hobbies.pug

@@ -10,7 +10,17 @@
 //    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
 //    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
+$green: #378087;
+$offWhite: #E8E8EB;
+$lightBlue: #A9C5E1;
+$darkBlue: #253551;
+$gray: #828792;
+  
+$accentColor: $green;
+$backgroundColor: $offWhite;
 
+address.vcard
+  font-style: normal;
 .vcard 
   .fn
     font-size: 2em;
@@ -23,15 +33,116 @@
   .bio-label::after
       content: ": ";
     
-body 
-  background-image: url('../images/brainscan.svg');
-  background-size: 100%;
-  font-family: "Avenir Next"
-  
+body
+  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: $backgroundColor;
+  padding-top: 20px;
+  padding-bottom: 20px;
   .container
     background-color: rgba(255,255,255,.8)
 
+.navbar
+    margin-bottom: 20px;
+
 img.avatar
-  border-radius: 3px;
+  border-radius: 4px;
   float: left;
   margin-right: 30px;
+  &:hover
+  
+    
+a.svg
+  position: relative;
+  display: inline-block;
+
+  &:after
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+
+
+@-webkit-keyframes spinner 
+  from 
+    -webkit-transform: rotateY(0deg);
+  to
+    -webkit-transform: rotateY(-360deg);
+
+
+@keyframes spinner 
+  from 
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+
+  to 
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+    
+svg
+  margin: .5em;
+    
+svg.run-animation
+  -webkit-animation-name: spinner;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 3s;
+
+  animation-name: spinner;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+   
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+
+  &:hover
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+  
+li.experience.vevent.position
+  list-style: none;
+  display: block;
+  margin: 1em;
+  
+  span
+    display: block;
+    
+    &.jobtitle
+      font-weight: bold;
+      
+div.iconcredit
+  font-size: .5em;
+  margin: 2em;
+    
+.nav-tabs
+  border-bottom: 0;
+  li.active > a:hover, li > a:hover
+    border-bottom: 0;
+    
+.quote
+  > *
+    text-indent: 2em;
+    margin-right: 1em;
+  &::after, &::before
+    color: gray;
+    font-size: 4em;
+    font-family: sans-serif;
+    position: absolute;
+  &::before
+    content: "“";
+    top: -.5em;
+  &::after
+    content: "”";
+    right: .5em;
+    bottom: -.5em;

@@ -1,0 +1,9 @@
+mixin event(name)
+  text(x="10" y="25" fill="navy" font-size="15")= name
+
+html
+  head
+  body
+    p test
+    svg(viewBox="0 0 500 600")
+      +event('birth')
