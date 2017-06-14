@@ -135,11 +135,11 @@ data = [{
 var ctx = $("#majorLanguages");
 
 var newData = {
-    'Java': [0,.5,.5,.5,.6,.7,.8,.9,1,2,3,4,5,6,7,8,9,10,11,12],
-    'Javascript': [.5,.5,.5,.6,.7,.8,.9,1,2,3,4,5,6,7,8,9,10,11,12],
-    'SQL': _.map(_.range(0, 15, .2), function(n) { return Math.round(n * 10) / 10; }),
-    'Visual Basic': [0,1,2,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5],
-    'PHP': [0,0,0,0,0,0,0,0,0,1,2,3,4,5,5]
+    'Java': [0,.5,.5,.5,.6,.7,.8,.9,1,2,3,4,5,6,7,8,9,10,11,12,13],
+    'Javascript': [.5,.5,.5,.6,.7,.8,.9,1,2,3,4,5,6,7,8,9,10,11,12,12],
+    'SQL': _.map(_.range(0, 16, .2), function(n) { return Math.round(n * 10) / 10; }),
+    'Visual Basic': [0,1,2,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5.5],
+    'PHP': [0,0,0,0,0,0,0,0,0,1,2,3,4,5,5,5]
 };
 
 var defaults = {
@@ -215,7 +215,7 @@ datasets.push(_.extend({
 var majorLanguages = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: _.range(2000, 2017),
+        labels: _.range(2000, 2018),
         datasets: datasets
     },
     options: {
