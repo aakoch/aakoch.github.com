@@ -1,6 +1,17 @@
 {
-  "name": "aakoch",
-  "version": "0.0.1",
+  "name": "aakoch_io",
+  "version": "0.0.2",
+  "description": "Adam A. Koch's online resume hosted on GitHub",
+  "author": {
+    "name": "Adam A. Koch"
+  },
+  "homepage": "https://aakoch.github.io/",
+  "license": "WTFPL",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aakoch/aakoch.github.com"
+  },
   "dependencies": {
     "bootstrap": "^3.3.6",
     "chart.js": "^2.1.4",
