@@ -1,9 +1,0 @@
-{
-    "name": "aakoch",
-    "version": "1.0.0",
-    "main": "app/index.html",
-    "dependencies": {
-        "bootstrap": "latest"
-    },
-    "appPath": "app"
-}
