@@ -4,3 +4,4 @@ app/dist/
 .publish/
 dist/
 build/
+.idea/
