@@ -69,34 +69,36 @@ gulp.task('js', function() {
 	.pipe(gulp.dest('./dist/js'))
 });
 
-gulp.task('sass', function () {  
+gulp.task('sass', function (done) {  
 	gulp.src('./app/sass/*.sass')
 	.pipe(plumber())
 	.pipe(sass())
 //	.pipe(gulp.dest('./build/sass/tmp'))
 //	.pipe(rename({suffix: '.min'}))
 //	.pipe(minifycss())
-	.pipe(gulp.dest('./dist/css'))
+  .pipe(gulp.dest('./dist/css'))
+  done();
 });
 
-gulp.task('serve', ['build'], function() {
+gulp.task('build', gulp.series('js', 'sass', 'pug', 'copy-assets', 'concat-minified-js', 'concat-minified-css', function (cb) {
+  cb();
+}));
+
+gulp.task('serve', gulp.series('build', function(done) { 
   console.log("entering serve")
   browserSync.init({
     server: {
       baseDir: './dist'
     }
   });
-  gulp.watch('./app/sass/**/*.sass', ['sass']);
-  gulp.watch('./app/pug/**/*.pug', ['pug']);
-  gulp.watch('./app/js/**/*.js', ['js']);
-  gulp.watch('./app/assets/**/*', ['copy-assets']);
+  gulp.watch('./app/sass/**/*.sass', gulp.series('sass'));
+  gulp.watch('./app/pug/**/*.pug', gulp.series('pug'));
+  gulp.watch('./app/js/**/*.js', gulp.series('js'));
+  gulp.watch('./app/assets/**/*', gulp.series('copy-assets'));
   gulp.watch('./dist/**/*', function(event) {
     browserSync.reload();
   });
-});
+  done();
+}));
 
-gulp.task('build', ['js', 'sass', 'pug', 'copy-assets', 'concat-minified-js', 'concat-minified-css'], function (cb) {
-  cb();
-});
-
-gulp.task('default', ['build', 'serve']);
+gulp.task('default', gulp.series('build', 'serve'));
