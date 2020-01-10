@@ -14,9 +14,10 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     package = require('./package.json'); // not used yet
 
-gulp.task('clean', function() {
+gulp.task('clean', function(done) {
   // You can use multiple globbing patterns as you would with `gulp.src`
-  return del(['dist']);
+  del(['dist']);
+  done();
 });
 
 gulp.task('pug', function buildHTML() {
@@ -63,10 +64,11 @@ gulp.task('concat-minified-css', function() {
     .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('js', function() {
-	return gulp.src('./app/js/*.js')
+gulp.task('js', function(done) {
+	gulp.src('./app/js/*.js')
 	.pipe(uglify())
 	.pipe(gulp.dest('./dist/js'))
+  done();
 });
 
 gulp.task('sass', function (done) {  
