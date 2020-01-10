@@ -3,7 +3,6 @@ include ./nav
 include ./history
 include ./vcard
 include ./projects
-include ./bodyofwork
 
 block content
   div
@@ -57,10 +56,6 @@ block content
       .tab-pane(id="experience" role="tabpanel")
         h2 Experience
         +history
-      .tab-pane(id="passions" role="tabpanel")
-        include passions.pug
       .tab-pane(id="projects" role="tabpanel")
         h2 Projects
         +projects
-      .tab-pane(id="bodyofwork" role="tabpanel")
-        include bodyofwork.pug
