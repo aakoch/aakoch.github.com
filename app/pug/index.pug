@@ -3,6 +3,7 @@ include ./nav
 include ./history
 include ./vcard
 include ./projects
+include ./portfolio
 
 block content
   div
@@ -59,3 +60,6 @@ block content
       .tab-pane(id="projects" role="tabpanel")
         h2 Projects
         +projects
+      .tab-pane(id="portfolio" role="tabpanel")
+        h2 Portfolio
+        +portfolio
