@@ -5,3 +5,4 @@ app/dist/
 dist/
 build/
 _site/
+.cache/

@@ -1,42 +1,26 @@
 {
-  "name": "aakoch_io",
-  "version": "0.0.2",
-  "description": "Adam A. Koch's online resume hosted on GitHub",
-  "author": {
-    "name": "Adam A. Koch"
+  "name": "aakoch.github.com",
+  "version": "0.0.3",
+  "description": "",
+  "main": "app/js/main.js",
+  "dependencies": {
+    "@popperjs/core": "^2.6.0",
+    "bootstrap": "^5.0.0-beta1"
   },
-  "homepage": "https://aakoch.github.io/",
-  "license": "WTFPL",
-  "private": true,
+  "scripts": {
+    "build": "parcel build app/pug/index.pug --public-url ./"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aakoch/aakoch.github.com"
+    "url": "git+https://github.com/aakoch/aakoch.github.com.git"
   },
-  "dependencies": {
-    "bootstrap": "^3.4.1",
-    "chart.js": "^2.9.3",
-    "jquery": "^3.5.1",
-    "nan": "^2.14.0",
-    "snapsvg": "git+https://github.com/adobe-webplatform/Snap.svg.git",
-    "tether": "^1.3.2",
-    "underscore": "^1.8.3"
+  "author": "Adam A. Koch (aakoch)",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/aakoch/aakoch.github.com/issues"
   },
+  "homepage": "https://github.com/aakoch/aakoch.github.com#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "del": "^2.2.0",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-cssnano": "^2.1.3",
-    "gulp-debounced-watch": "^1.0.4",
-    "gulp-gh-pages": "^0.6.0-6",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-pug": "3.0.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.1.0",
-    "gulp-uglify": "^1.5.2",
-    "gulp-watch": "^5.0.1",
-    "js-yaml": "^3.13.1",
-    "node-neat": "^1.7.2"
+    "pug": "^3.0.0"
   }
 }

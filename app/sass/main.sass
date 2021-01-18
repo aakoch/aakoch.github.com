@@ -1,151 +1,166 @@
 
+@import "~bootstrap/scss/_functions"
+@import "~bootstrap/scss/_variables"
+@import "~bootstrap/scss/_mixins"
+
+@import "~bootstrap/scss/bootstrap"
 
 //@mixin linearGradient($top, $bottom)
-//    background: $top; /* Old browsers */
-//    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
-//    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
-//    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
-//    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
-//    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
-//    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
-//    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+//    background: $top /* Old browsers */
+//    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%) /* FF3.6+ */
+//    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)) /* Chrome,Safari4+ */
+//    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%) /* Chrome10+,Safari5.1+ */
+//    background: -o-linear-gradient(top,  $top 0%,$bottom 100%) /* Opera 11.10+ */
+//    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%) /* IE10+ */
+//    background: linear-gradient(to bottom,  $top 0%,$bottom 100%) /* W3C */
+//    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ) /* IE6-9 */
 
-$green: #378087;
-$offWhite: #E8E8EB;
-$lightBlue: #A9C5E1;
-$darkBlue: #253551;
-$gray: #828792;
+$green: #378087
+$offWhite: #E8E8EB
+$lightBlue: #A9C5E1
+$darkBlue: #253551
+$gray: #828792
   
-$accentColor: $green;
-$backgroundColor: $offWhite;
+$accentColor: $green
+$backgroundColor: $offWhite
 
 address.vcard
-  font-style: normal;
+  font-style: normal
 .vcard 
   .fn
-    font-size: 2em;
+    font-size: 2em
   
   .adr
     .street-address
       display: block
     .postal-code
-      margin-left: 1em;
+      margin-left: 1em
   .bio-label::after
-      content: ": ";
+      content: ": "
     
 body
-  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-  background-color: $backgroundColor;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  .container
+  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size: 14px
+  line-height: 1.42857143
+  color: #333
+  background-color: $backgroundColor
+  padding: 1rem
+  .container > div
     background-color: rgba(255,255,255,.8)
 
-.navbar
-    margin-bottom: 20px;
 
 img.avatar
-  border-radius: 4px;
-  float: left;
-  margin-right: 30px;
+  border-radius: 4px
+  float: left
+  margin-right: 30px
   &:hover
   
     
 a.svg
-  position: relative;
-  display: inline-block;
+  position: relative
+  display: inline-block
 
   &:after
-    position: absolute; 
-    top: 0; 
-    right: 0; 
-    bottom: 0; 
-    left: 0;
+    position: absolute 
+    top: 0 
+    right: 0 
+    bottom: 0 
+    left: 0
 
 
 @-webkit-keyframes spinner 
   from 
-    -webkit-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg)
   to
-    -webkit-transform: rotateY(-360deg);
+    -webkit-transform: rotateY(-360deg)
 
 
 @keyframes spinner 
   from 
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg)
+    -ms-transform: rotateY(0deg)
+    transform: rotateY(0deg)
 
   to 
-    -moz-transform: rotateY(-360deg);
-    -ms-transform: rotateY(-360deg);
-    transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg)
+    -ms-transform: rotateY(-360deg)
+    transform: rotateY(-360deg)
     
 svg
-  margin: .5em;
+  margin: .5em
     
 svg.run-animation
-  -webkit-animation-name: spinner;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-name: spinner
+  -webkit-animation-timing-function: linear
+  -webkit-animation-iteration-count: infinite
+  -webkit-animation-duration: 3s
 
-  animation-name: spinner;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 3s;
+  animation-name: spinner
+  animation-timing-function: linear
+  animation-iteration-count: infinite
+  animation-duration: 3s
 
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d
+  -moz-transform-style: preserve-3d
+  -ms-transform-style: preserve-3d
+  transform-style: preserve-3d
    
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
+  -webkit-animation-play-state: paused
+  animation-play-state: paused
 
   &:hover
-    -webkit-animation-play-state: running;
-    animation-play-state: running;
+    -webkit-animation-play-state: running
+    animation-play-state: running
   
 li.experience.vevent.position
-  list-style: none;
-  display: block;
-  margin: 1em;
+  list-style: none
+  display: block
+  margin: 1em
   
   span
-    display: block;
+    display: block
     
     &.jobtitle
-      font-weight: bold;
+      font-weight: bold
       
 div.iconcredit
-  font-size: .5em;
-  margin: 2em;
+  font-size: .5em
+  margin: 2em
     
 .nav-tabs
-  border-bottom: 0;
+  border-bottom: 0
   li.active > a:hover, li > a:hover
-    border-bottom: 0;
+    border-bottom: 0
     
-.quote
+.quote p
   > *
-    text-indent: 2em;
-    margin-right: 1em;
+    text-indent: 2em
+    margin-right: 1em
+    position: absolute
   &::after, &::before
-    color: gray;
-    font-size: 4em;
-    font-family: sans-serif;
-    position: absolute;
+    color: gray
+    font-size: 4em
+    font-family: sans-serif
+    position: absolute
   &::before
-    content: "“";
-    top: -.5em;
+    content: "“"
+    top: -.5em
+    left: -.5em
   &::after
-    content: "”";
-    right: .5em;
-    bottom: -.5em;
+    content: "”"
+    right: .5em
 
 .github-view-source-link
-  font-size: .9em;
+  font-size: .9em
+
+
+.tab-content
+  padding: 1em
+  border-radius: .2em
+
+.header
+  margin: .4em 2em .8em
+
+.quote-container
+  position: relative
+  font-size: 1.2em

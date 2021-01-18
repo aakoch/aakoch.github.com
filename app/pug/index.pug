@@ -6,60 +6,59 @@ include ./projects
 include ./portfolio
 
 block content
-  div
-    +nav
-    .tab-content.container
-      .tab-pane.active(id="home" role="tabpanel")
-        h2 Welcome
-        .row
-          .col-md-8 
-            p Adam is a 
-              a(href="http://manifesto.softwarecraftsmanship.org/#/en") software craftsman 
-              | who has been programming since 
-              a(href="https://en.wikipedia.org/wiki/BASIC") BASIC
-              | .
-            p Experienced designer and full-stack developer of systems and applications from front-end user interfaces to back-end database designs. 
-            p Passionate about clean code.
+  +nav
+  .tab-content
+    .tab-pane.active(id="home" role="tabpanel")
+      h2 Welcome
+      .row
+        .col-8 
+          p Adam is a 
+            a(href="http://manifesto.softwarecraftsmanship.org/#/en") software craftsman 
+            | who has been programming since 
+            a(href="https://en.wikipedia.org/wiki/BASIC") BASIC
+            | .
+          p Experienced designer and full-stack developer of systems and applications from front-end user interfaces to back-end database designs. 
+          p Passionate about clean code.
 
-            h3 Areas of Expertise
-            h4 Front-end
-            p Responsive applications designed for both mobile and desktop
-            ul
-              li Javascript with Angular, jQuery, YUI, Underscore and more
-              li CSS3 responsive design with layout frameworks Bootstrap, Foundation, YUI
-              li HTML5 with Jade (now Pug)
-              li RESTful services
-            h4 Back-end
-            p Designed and developed applications that provide a backend to web applications that communicates with JMS and RESTful services and databases
-            ul
-              li Mostly Java but knows PHP and has dabbled in C++, Ruby and some other JVM languages
-              li Spring Framework
-              li Database design using Oracle, MySQL and SQL Server
-            h4 Application Lifecycle
-            ul 
-              li Agile and Kanban methodologies with JIRA, Quality Center and VersionOne
-              li Build tools Gradle, Grunt, Gulp, Maven and Ant
-              li Source control management tools Git and Subversion
+          h3 Areas of Expertise
+          h4 Front-end
+          p Responsive applications designed for both mobile and desktop
+          ul
+            li Javascript with Angular, jQuery, YUI, Underscore and more
+            li CSS3 responsive design with layout frameworks Bootstrap, Foundation, YUI
+            li HTML5 with Jade (now Pug)
+            li RESTful services
+          h4 Back-end
+          p Designed and developed applications that provide a backend to web applications that communicates with JMS and RESTful services and databases
+          ul
+            li Mostly Java but knows PHP and has dabbled in C++, Ruby and some other JVM languages
+            li Spring Framework
+            li Database design using Oracle, MySQL and SQL Server
+          h4 Application Lifecycle
+          ul 
+            li Agile and Kanban methodologies with JIRA, Quality Center and VersionOne
+            li Build tools Gradle, Grunt, Gulp, Maven and Ant
+            li Source control management tools Git and Subversion
 
-          .col-md-4
-            quote “We must be willing to let go of the life we planned so as to have the life that is waiting for us.” -- Joseph Campbell
-        .row
-          .col-md-8
-          .col-md-4
-            +vcard
-        .row
-          .col-md-12
-            .github-view-source-link View 
-              a(href="https://github.com/aakoch/aakoch.github.com/blob/gh-pages/app/pug/index.pug") the source
-              |  for this page!
-      .tab-pane(id="skills" role="tabpanel")
-        include ./skills.pug
-      .tab-pane(id="experience" role="tabpanel")
-        h2 Experience
-        +history
-      .tab-pane(id="projects" role="tabpanel")
-        h2 Projects
-        +projects
-      .tab-pane(id="portfolio" role="tabpanel")
-        h2 Portfolio
-        +portfolio
+        .col-md-4
+          quote “We must be willing to let go of the life we planned so as to have the life that is waiting for us.” -- Joseph Campbell
+      .row
+        .col-md-8
+        .col-md-4
+          +vcard
+      .row
+        .col-md-12
+          .github-view-source-link View 
+            a(href="https://github.com/aakoch/aakoch.github.com/blob/gh-pages/app/pug/index.pug") the source
+            |  for this page!
+    .tab-pane(id="skills" role="tabpanel")
+      include ./skills.pug
+    .tab-pane(id="experience" role="tabpanel")
+      h2 Experience
+      +history
+    .tab-pane(id="projects" role="tabpanel")
+      h2 Projects
+      +projects
+    .tab-pane(id="portfolio" role="tabpanel")
+      h2 Portfolio
+      +portfolio

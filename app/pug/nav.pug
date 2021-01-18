@@ -1,15 +1,15 @@
 mixin nav           
   ul.nav.nav-tabs(role="tablist")
-    li.active(role="presentation")
-      a(href='#home' role="tab" data-toggle="tab")
+    li.nav-item(role="presentation")
+      a.nav-link.active(href='#home' role="tab" data-bs-toggle="tab")
         | Home 
         span.sr-only (current)
-    li
-      a(href='#skills' role="tab" data-toggle="tab") Skills
-    li
-      a(href='#experience' role="tab" data-toggle="tab") Experience
-    li
-      a(href='#projects' role="tab" data-toggle="tab") Projects
-    li
-      a(href='#portfolio' role="tab" data-toggle="tab") Portfolio
+    li.nav-item
+      a.nav-link(href='#skills' role="tab" data-bs-toggle="tab") Skills
+    li.nav-item
+      a.nav-link(href='#experience' role="tab" data-bs-toggle="tab") Experience
+    li.nav-item
+      a.nav-link(href='#projects' role="tab" data-bs-toggle="tab") Projects
+    li.nav-item
+      a.nav-link(href='https://aakoch.github.io/portfolio/' role="tab") Portfolio
           
