@@ -8,7 +8,7 @@
     "bootstrap": "^5.0.0-beta1"
   },
   "scripts": {
-    "build": "parcel build app/pug/index.pug --public-url ./"
+    "build": "parcel build app/pug/index.pug app/pug/clothesline.pug --public-url ./"
   },
   "repository": {
     "type": "git",
