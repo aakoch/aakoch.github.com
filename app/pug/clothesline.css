@@ -1,15 +1,34 @@
+@font-face {
+  font-family: 'SpaceMonkey';
+  src: url('../assets/fonts/subset-SpaceMonkey.woff2') format('woff2'),
+      url('../assets/fonts/subset-SpaceMonkey.woff2') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 .container {
   position: relative;
 }
 
+#golink {
+  margin-right: 1em;
+}
+
 .item {
-  border: solid 1px black;
+  border: solid 2px darkgray;
   width: 353px;
   height: 310px;
   position: absolute;
+  box-shadow: 10px 10px 10px grey;
+  border-radius: 5px;
+  left: 0;
+  font-family: 'SpaceMonkey';
+  font-weight: 500;
+  font-style: normal;
 }
 
-@media screen and (max-width: 7000px) {
+/* @media screen and (max-width: 7000px) {
   .item {
     right: 1000px;
   }
@@ -28,11 +47,13 @@
 }
 
 @media screen and (max-width: 350px) {
-  right: 379px;
-}
+  .item {
+    right: 379px;
+  }
+} */
 
 .moving {
-  animation-delay: 2s;
+/*   animation-delay: 2s; */
   animation-duration: 2.5s;
   animation-name: float-out;
   animation-iteration-count: infinite;
@@ -47,8 +68,6 @@
   left: 50%;
   z-index: 2;
   transform: translate(-50%, -50%);
-  
-  
 }
 
 hr {
@@ -74,6 +93,7 @@ hr {
 img {
   position: absolute;
   border: white solid 4px;
+  border-radius: 10px;
 }
 
 @keyframes float-out {
@@ -88,7 +108,7 @@ img {
   }
   to {
     transform: rotate(0deg);
-    right: 0;
+    left: calc(100% - 353px);
   }
   
 }

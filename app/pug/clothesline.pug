@@ -1,6 +1,10 @@
 extends ./clothesline_base.pug
 
 block content
+  span#golink
+    a(href="javascript:$('hr + div').addClass('moving')") Go!
+  span
+    a(href="javascript:$('.moving').removeClass('moving')") Stop!
   .container
     hr(noshade)
     .item.moving
@@ -8,7 +12,3 @@ block content
       .picture
         p My Alero
         
-  p I haven't figured out how to start on the left side and go to right side (or any other position stuff).
-  a(href="javascript:$('hr + div').addClass('moving')") Go!
-  p
-    a(href="javascript:$('.moving').removeClass('moving')") Stop!
