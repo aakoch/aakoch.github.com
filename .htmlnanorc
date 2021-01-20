@@ -1,3 +1,7 @@
 {
-    "minifySvg": false
+    minifySvg: { 
+      plugins: [
+            { removeUnknownsAndDefaults: false }
+        ]
+    }
 }
