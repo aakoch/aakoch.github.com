@@ -12,8 +12,7 @@ html(lang='en')
 
     link(rel="shortcut icon" href="../assets/favicon.ico")
 
-    link(rel="stylesheet", href="../sass/main.sass")
-    //link(rel="stylesheet", href="css/magic.min.css")
+    link(rel="stylesheet", href="../sass/custom.scss")
     link(rel="author", href="../assets/humans.txt")
     
     link(rel="apple-touch-icon" sizes="57x57" href="../assets/images/apple-icon-57x57.png")
@@ -33,14 +32,11 @@ html(lang='en')
     meta(name="msapplication-TileImage" content="../assets/images/ms-icon-144x144.png")
 
   body
-    +header
     
     .container
+      +header
       block content
-    
-    +footer
+      +footer
 
-    script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
-    script.
-      window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\\/script>')
-    script(src="../js/main.js")
+    script(src="../../node_modules/bootstrap/js/dist/base-component.js")
+    script(src="../../node_modules/bootstrap/js/dist/tab.js")

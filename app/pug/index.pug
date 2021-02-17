@@ -2,46 +2,47 @@ extends ./base.pug
 include ./nav
 include ./history
 include ./vcard
-include ./projects
 include ./portfolio
+include ./volunteer
 
 block content
   +nav
   .tab-content
     .tab-pane.active(id="home" role="tabpanel")
-      h2 Welcome
+      
       .row
-        .col-8 
-          p Adam is a 
-            a(href="http://manifesto.softwarecraftsmanship.org/#/en") software craftsman 
-            | who has been programming since 
-            a(href="https://en.wikipedia.org/wiki/BASIC") BASIC
-            | .
-          p Experienced designer and full-stack developer of systems and applications from front-end user interfaces to back-end database designs. 
-          p Passionate about clean code.
-
+        .col-12 
+          div.intro
+            p Software engineer with over 20 years of professional experience.
+            p Passionate about software maintainability through proven design patterns and clean code.
+          
+          
           h3 Areas of Expertise
-          h4 Front-end
-          p Responsive applications designed for both mobile and desktop
-          ul
-            li Javascript with Angular, jQuery, YUI, Underscore and more
-            li CSS3 responsive design with layout frameworks Bootstrap, Foundation, YUI
-            li HTML5 with Jade (now Pug)
-            li RESTful services
           h4 Back-end
-          p Designed and developed applications that provide a backend to web applications that communicates with JMS and RESTful services and databases
+          p Designed and developed server-side Java applications ranging from ReSTful services, business layers and data access layers via JMS and databases using:
           ul
-            li Mostly Java but knows PHP and has dabbled in C++, Ruby and some other JVM languages
-            li Spring Framework
-            li Database design using Oracle, MySQL and SQL Server
-          h4 Application Lifecycle
-          ul 
-            li Agile and Kanban methodologies with JIRA, Quality Center and VersionOne
-            li Build tools Gradle, Grunt, Gulp, Maven and Ant
-            li Source control management tools Git and Subversion
+            li Java intensively but knowledgable in PHP, Python and more
+            li Frameworks including Spring, Hibernate, MyBatis and more
+            li Database design using Oracle, MySQL, SQL Server and PostgreSQL
+            li Experienced with containers Tomcat, Weblogic, Oracle Portal, Liferay
+          h4 Front-end
+          p Designed and developed responsive applications for both mobile and desktop using:
+          ul
+            li Javascript frameworks such as Angular, jQuery, YUI, Prototype
+            li Java MVC frameworks such as Struts, Wicket, JSP, JSF, JPDK, JSTL
+            li HTML5 and CSS3 responsive design
+          h4 Application Lifecycle and Continuous Integration
+          p Experienced in the full software lifecycle from requirements gathering to production support using:
+          ul
+            li Source control using Git, Subversion and Source Integrity
+            li Build and continuous integration tools Jenkins, Puppet, NodeJS, Gradle, Maven, Grunt, etc.
+            li Testing frameworks and tools including JUnit, Jasmine, Selenium, Cucumber, JSUnit, JProfiler
+            li Code analysis using Crucible, SonarQube, FOSSA, Blackduck and Fortify
+            li Support tools AppDynamics, Sitescope, Grafana, Dynatrace, VisualVM
+            li Project management tools such as Jira, VersionOne and MS Project
 
-        .col-md-4
-          quote “We must be willing to let go of the life we planned so as to have the life that is waiting for us.” -- Joseph Campbell
+        //- .col-md-4
+        //-   quote “We must be willing to let go of the life we planned so as to have the life that is waiting for us.” -- Joseph Campbell
       .row
         .col-md-8
         .col-md-4
@@ -49,16 +50,16 @@ block content
       .row
         .col-md-12
           .github-view-source-link View 
-            a(href="https://github.com/aakoch/aakoch.github.com/blob/gh-pages/app/pug/index.pug") the source
+            a(href="https://github.com/aakoch/aakoch.github.com/blob/master/app/pug/index.pug") the source
             |  for this page!
     .tab-pane(id="skills" role="tabpanel")
       include ./skills.pug
     .tab-pane(id="experience" role="tabpanel")
       h2 Experience
       +history
-    .tab-pane(id="projects" role="tabpanel")
-      h2 Projects
-      +projects
     .tab-pane(id="portfolio" role="tabpanel")
       h2 Portfolio
       +portfolio
+    .tab-pane(id="volunteer" role="tabpanel")
+      h2 Volunteering
+      +volunteer
