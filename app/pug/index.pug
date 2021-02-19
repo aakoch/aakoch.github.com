@@ -9,13 +9,13 @@ block content
   .tab-content
     .tab-pane.active(id="home" role="tabpanel" aria-labelledby="home-tab")
       .row
-        .col-12 
-          div.intro
+        .col-12
+          div.intro.shadow
             p Software engineer with over 20 years of professional experience.
             p Passionate about software maintainability through proven design patterns and clean code.
           
           
-          h3 Areas of Expertise
+          h3.text-center Areas of Expertise
           h4 Back-end
           p Designed and developed server-side Java applications ranging from ReSTful services, business layers and data access layers via JMS and databases using:
           ul
@@ -53,11 +53,11 @@ block content
     .tab-pane(id="skills" role="tabpanel" aria-labelledby="skills-tab")
       include ./skills.pug
     .tab-pane(id="experience" role="tabpanel" aria-labelledby="experience-tab")
-      h2 Experience
+      h3.text-center Experience
       +history
     .tab-pane(id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab")
-      h2 Portfolio
+      h3.text-center Portfolio
       +portfolio
-    .tab-pane(id="volunteer" role="tabpanel" aria-labelledby="volunteer-tab")
-      h2 Volunteering
-      +volunteer
+    //- .tab-pane(id="volunteer" role="tabpanel" aria-labelledby="volunteer-tab")
+    //-   h3 Volunteering
+    //-   +volunteer
