@@ -3,7 +3,6 @@
 // $font-family-sans-serif: SpaceMonkey
 $my-blue: #6792bd
 $my-green: #6cc3af
-
 address.vcard
   font-style: normal
 .vcard 
@@ -25,10 +24,18 @@ body
   // color: #333
   // background-color: $my-blue
   background-image: linear-gradient(180deg, $my-green, $my-blue)
-  padding: 1rem
+  padding-bottom: 1rem
+
+.navbar-brand
+  font-size: 3rem
+  margin-left: 2rem
 
 .tab-content
   background-color: $white
+  padding-bottom: 1rem
+  padding-top: 4rem
+  top: -3rem
+  position: relative
 
 img.avatar
   border-radius: 4px
@@ -121,16 +128,16 @@ div.iconcredit
   font-size: .5em
   margin: 2em
     
-.nav-tabs
-  border-bottom: 0
-  li.active > a:hover, li > a:hover
-    border-bottom: 0
+// .nav-tabs
+//   border-bottom: 0
+//   li.active > a:hover, li > a:hover
+//     border-bottom: 0
 
-a.nav-link
-  color: $black
+// a.nav-link
+//   color: $black
 
-a.nav-link.active
-  font-weight: bold
+// a.nav-link.active
+//   font-weight: bold
     
 .quote p
   > *
@@ -154,9 +161,9 @@ a.nav-link.active
   font-size: .9em
 
 
-.tab-content
-  padding: 1em
-  border-radius: .2em
+// .tab-content
+//   padding: 1em
+//   border-radius: .2em
 
 .tab-pane
   padding-left: 1em
@@ -168,3 +175,9 @@ a.nav-link.active
 .card
   @include gradient-y(tint-color($gray-500, 50%), $white)
   margin-bottom: 2em
+
+.navbar
+  // @include gradient-y(rgba(255, 255, 255, 1), rgba(255, 255, 255, .5), 80%)
+  background-color: $white
+  border-bottom: solid $gray-600 5px
+  // padding-bottom: 1rem

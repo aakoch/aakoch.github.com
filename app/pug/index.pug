@@ -1,15 +1,13 @@
 extends ./base.pug
-include ./nav
+include ./navbar
 include ./history
 include ./vcard
 include ./portfolio
 include ./volunteer
 
 block content
-  +nav
   .tab-content
-    .tab-pane.active(id="home" role="tabpanel")
-      
+    .tab-pane.active(id="home" role="tabpanel" aria-labelledby="home-tab")
       .row
         .col-12 
           div.intro
@@ -52,14 +50,14 @@ block content
           .github-view-source-link View 
             a(href="https://github.com/aakoch/aakoch.github.com/blob/master/app/pug/index.pug") the source
             |  for this page!
-    .tab-pane(id="skills" role="tabpanel")
+    .tab-pane(id="skills" role="tabpanel" aria-labelledby="skills-tab")
       include ./skills.pug
-    .tab-pane(id="experience" role="tabpanel")
+    .tab-pane(id="experience" role="tabpanel" aria-labelledby="experience-tab")
       h2 Experience
       +history
-    .tab-pane(id="portfolio" role="tabpanel")
+    .tab-pane(id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab")
       h2 Portfolio
       +portfolio
-    .tab-pane(id="volunteer" role="tabpanel")
+    .tab-pane(id="volunteer" role="tabpanel" aria-labelledby="volunteer-tab")
       h2 Volunteering
       +volunteer

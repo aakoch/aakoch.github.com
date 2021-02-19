@@ -1,4 +1,7 @@
-import 'bootstrap';
+import 'bootstrap'
+
+import '../sass/custom.scss' // Import our scss file
+
 // import _ from 'lodash';
 
 // //// First lets create our drawing surface out of existing SVG element
