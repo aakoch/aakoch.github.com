@@ -3,6 +3,7 @@
 @import "colors.scss";
 @import "~bootstrap/scss/_variables";
 @import "~bootstrap/scss/_mixins";
+@import "~bootstrap/scss/_utilities";
 
 // Include custom variable default overrides here
 
@@ -39,6 +40,9 @@
 
 // Helpers
 @import "~bootstrap/scss/_helpers";
+
+@import "~bootstrap/scss/utilities/_api";
+
 
 // scss-docs-end import-stack
 

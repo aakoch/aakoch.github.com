@@ -1,8 +1,8 @@
 include ./header
 mixin navbar
   nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top.bs-light
-    .container-fluid
-      a.navbar-brand.h1(href="#") Adam A. Koch
+    .container
+      a.navbar-brand.h2(href="#") Adam A. Koch
       ul.nav.navbar-nav.me-auto.mb-2.mb-lg-0(role="tablist")
         li.nav-item(role="presentation")
           a.nav-link.h5.active#home-tab(data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true") Home
@@ -12,7 +12,7 @@ mixin navbar
           a.nav-link.h5#experience-tab(data-bs-toggle="tab" data-bs-target="#experience" type="button" role="tab" aria-controls="experience" aria-selected="false") Experience
         li.nav-item(role="presentation")
           a.nav-link.h5#portfolio-tab(data-bs-toggle="tab" data-bs-target="#portfolio" type="button" role="tab" aria-controls="portfolio" aria-selected="false") Portfolio
-        li.nav-item(role="presentation")
-          a.nav-link.h5#volunteer-tab(data-bs-toggle="tab" data-bs-target="#volunteer" type="button" role="tab" aria-controls="volunteer" aria-selected="false") Volunteering
+        //- li.nav-item(role="presentation")
+        //-   a.nav-link.h5#volunteer-tab(data-bs-toggle="tab" data-bs-target="#volunteer" type="button" role="tab" aria-controls="volunteer" aria-selected="false") Volunteering
 
       +header
