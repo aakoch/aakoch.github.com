@@ -2,7 +2,6 @@
   "name": "aakoch.github.com",
   "version": "0.0.3",
   "description": "",
-  "main": "app/js/main.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@popperjs/core": "^2.6.0",

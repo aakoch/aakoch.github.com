@@ -178,8 +178,11 @@ div.iconcredit
 .navbar
   // @include gradient-y(rgba(255, 255, 255, 1), rgba(255, 255, 255, .5), 80%)
   background-color: $white
-  border-bottom: solid $gray-600 5px
+  border-bottom: solid 5px $gray-400
   // padding-bottom: 1rem
+
+.navbar-bottom-line
+  @include gradient-x(tint-color($gray-500, 50%), $white)
 
 li
   .rounded-pill
