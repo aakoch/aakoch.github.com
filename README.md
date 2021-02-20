@@ -1,7 +1,6 @@
 # aakoch's GitHub page / résumé
 
 ## Created with 
-* 
 * [Pug](https://github.com/pugjs/pug)
 * [Sass](http://sass-lang.com)
 * [Bootstrap](http://getbootstrap.com)
@@ -10,7 +9,7 @@
 * Git
 
 ## To Run
-```npm run run ```
+```yarn start ```
 
 ## To Build
-```npm run build```
+```yarn build```

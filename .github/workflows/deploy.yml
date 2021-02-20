@@ -11,21 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: node --version
-    - name: Cache node modules
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-npm-
     - name: Install Yarn
       run: npm i yarn
     - name: Install dependencies
       run: yarn install
-    - name: Test
-      run: npm run test --if-present
     - name: Build
-      run: yarn run build
+      run: yarn build
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
