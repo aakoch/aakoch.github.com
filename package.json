@@ -10,8 +10,9 @@
     "yarn": "^1.22.10"
   },
   "scripts": {
-    "run": "parcel app/pug/index.pug",
-    "build": "parcel build app/pug/index.pug app/pug/clothesline.pug --public-url ./"
+    "run": "parcel serve app/pug/index.pug",
+    "build": "parcel build app/pug/index.pug app/pug/clothesline.pug --public-url ./",
+    "start": "parcel serve app/pug/index.pug"
   },
   "repository": {
     "type": "git",
