@@ -18,8 +18,9 @@ jobs:
         key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-npm-
-    - name: Install dependencies
+    - name: Install Yarn
       run: npm i yarn
+    - name: Install dependencies
       run: yarn install
     - name: Test
       run: npm run test --if-present
