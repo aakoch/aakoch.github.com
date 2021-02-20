@@ -4,18 +4,24 @@ p This page is a little outdated. Come back later for an updated version.
 .row
   .col-md-4.col-sm-6
     .card.shadow
+      .card-body.pill-hover
+        h5.card-title Java
+        .card-text 
+          | I learned Java starting with version 1.2 in 1998 during an internship with Lockheed Martin. I've programmed in Java most of my professional career, with the exception of when I was programming Javascript, although the 2 often went hand-in-hand. 
+          span.badge.rounded-pill.bg-danger Pro
+  .col-md-4.col-sm-6
+    .card.shadow
+      .card-body.pill-hover
+        h5.card-title Javascript
+        .card-text 
+          | While I didn't start programming professionally in Javascript during the first few years of my career, I have played around with it starting when I hosted a personal webpage from my dorm room at Penn State in 1995. I still remember the image I animated using "DHTML" (Dynamic HTML). 
+          span.badge.rounded-pill.bg-danger Pro
+  .col-md-4.col-sm-6
+    .card.shadow
       .card-body
-        h5.card-title Major Languages
+        h5.card-title Other
         .card-text
           ul
-            li 
-              strong Java 
-              | - since 1998  
-              span.badge.rounded-pill.bg-danger Pro
-            li 
-              strong Javascript, HTML, CSS 
-              | - since 1995 
-              span.badge.rounded-pill.bg-danger Pro 
             li PHP 
               | - since 2000-something 
               span.badge.rounded-pill.bg-warning.text-dark Good 
@@ -25,9 +31,25 @@ p This page is a little outdated. Come back later for an updated version.
             li ColdFusion 
               | - since 2000-something 
               span.badge.rounded-pill.bg-warning.text-dark Good 
-          //.col-md-7
-          //strong This graph is currently using fake data!
-          //canvas(id="majorLanguages" width="500" height="300")
+
+            li 
+              a(href="https://github.com/aakoch/robocar") Python  
+              span.badge.rounded-pill.bg-warning.text-dark Good 
+            li 
+              a(href="https://github.com/aakoch/railsapp") Ruby 
+              span.badge.rounded-pill.bg-success Novice
+            li 
+              a(href="https://github.com/aakoch/elm-slab") Elm 
+              span.badge.rounded-pill.bg-success Novice
+            li C++
+              span.badge.rounded-pill.bg-success Novice
+            li 
+              a(href="https://github.com/aakoch/PunchDad") Swift 
+              span.badge.rounded-pill.bg-success Novice
+            li Perl
+              span.badge.rounded-pill.bg-success Novice
+            li Groovy
+              span.badge.rounded-pill.bg-success Novice
 
 .row
   .col-md-4.col-sm-6
@@ -76,35 +98,25 @@ p This page is a little outdated. Come back later for an updated version.
   .col-md-4.col-sm-6
     .card.shadow
       .card-body
-        h5.card-title Other Languages I've Played With
+        h5.card-title Markup Languages
         .card-text
           ul
-            li 
-              a(href="https://github.com/aakoch/robocar") Python  
-              span.badge.rounded-pill.bg-warning.text-dark Good 
-            li 
-              a(href="https://github.com/aakoch/railsapp") Ruby 
-              span.badge.rounded-pill.bg-success Novice
-            li 
-              a(href="https://github.com/aakoch/elm-slab") Elm 
-              span.badge.rounded-pill.bg-success Novice
-            li C++
-              span.badge.rounded-pill.bg-success Novice
-            li 
-              a(href="https://github.com/aakoch/PunchDad") Swift 
-              span.badge.rounded-pill.bg-success Novice
-            li Pug
+            li HTML
               span.badge.rounded-pill.bg-danger Pro 
-            li Perl
-              span.badge.rounded-pill.bg-success Novice
+            li JSON
+              span.badge.rounded-pill.bg-danger Pro 
             li XML
               span.badge.rounded-pill.bg-warning.text-dark Good 
             li XSD
               span.badge.rounded-pill.bg-success Novice
             li XSLT
               span.badge.rounded-pill.bg-success Novice
-            li JSON
+            li Pug
               span.badge.rounded-pill.bg-danger Pro 
+            li Markdown
+              span.badge.rounded-pill.bg-warning.text-dark Good 
+            li YAML
+              span.badge.rounded-pill.bg-warning.text-dark Good 
 
   .col-md-4.col-sm-6
     .card.shadow
@@ -119,6 +131,14 @@ p This page is a little outdated. Come back later for an updated version.
             li Ant
               span.badge.rounded-pill.bg-warning.text-dark Good 
             li npm
+              span.badge.rounded-pill.bg-warning.text-dark Good 
+            li Puppet
+              span.badge.rounded-pill.bg-warning.text-dark Good 
+            li Hieradata
+              span.badge.rounded-pill.bg-warning.text-dark Good 
+            li Foreman
+              span.badge.rounded-pill.bg-warning.text-dark Good 
+            li Docker
               span.badge.rounded-pill.bg-warning.text-dark Good 
             li Grunt
               span.badge.rounded-pill.bg-warning.text-dark Good 
@@ -147,7 +167,7 @@ p This page is a little outdated. Come back later for an updated version.
   .col-md-4.col-sm-6
     .card.shadow
       .card-body
-        h5.card-title Databases
+        h5.card-title Databases and related tools
         .card-text
           ul
             li Oracle
@@ -158,8 +178,16 @@ p This page is a little outdated. Come back later for an updated version.
               span.badge.rounded-pill.bg-warning.text-dark Good 
             li Postgres
               span.badge.rounded-pill.bg-warning.text-dark Good 
+            li MongoDB
+              span.badge.rounded-pill.bg-success Novice
+            li neo4j
+              span.badge.rounded-pill.bg-success Novice
+            li MyBatis
+              span.badge.rounded-pill.bg-warning.text-dark Good 
             li Liquibase
               span.badge.rounded-pill.bg-danger Pro 
+            li PowerDesigner
+              span.badge.rounded-pill.bg-success Novice
 
   .col-md-4.col-sm-6
     .card.shadow
@@ -176,10 +204,16 @@ p This page is a little outdated. Come back later for an updated version.
               span.badge.rounded-pill.bg-warning.text-dark Good 
             li Fortify
               span.badge.rounded-pill.bg-warning.text-dark Good 
-          div Continuous Integration
-          ul 
             li SonarQube
               span.badge.rounded-pill.bg-warning.text-dark Good 
+            li Fortify
+              span.badge.rounded-pill.bg-success Novice
+            li Blackduck
+              span.badge.rounded-pill.bg-success Novice
+            li FOSSA
+              span.badge.rounded-pill.bg-success Novice
+          div Continuous Integration
+          ul 
             li Jenkins (aka Hudson)
               span.badge.rounded-pill.bg-danger Pro 
             li TeamCity
@@ -299,7 +333,19 @@ p This page is a little outdated. Come back later for an updated version.
         h5.card-title Other
         .card-text
           ul
+            li JIRA
+              span.badge.rounded-pill.bg-danger Pro 
+            li VersionOne
+              span.badge.rounded-pill.bg-warning.text-dark Good 
+            li Confluence
+              span.badge.rounded-pill.bg-warning.text-dark Good 
             li Artifactory
+              span.badge.rounded-pill.bg-success Novice
+            li Splunk
+              span.badge.rounded-pill.bg-success Novice
+            li AppDynamics
+              span.badge.rounded-pill.bg-success Novice
+            li VisualVM
               span.badge.rounded-pill.bg-success Novice
             li Regular Expressions
               span.badge.rounded-pill.bg-warning.text-dark Good 
@@ -314,6 +360,8 @@ p This page is a little outdated. Come back later for an updated version.
               span.badge.rounded-pill.bg-warning.text-dark Good 
             li slf4j
               span.badge.rounded-pill.bg-warning.text-dark Good 
+            li logback
+              span.badge.rounded-pill.bg-warning.text-dark Good 
             li JUnit
               span.badge.rounded-pill.bg-warning.text-dark Good 
             li Cucumber
@@ -325,6 +373,12 @@ p This page is a little outdated. Come back later for an updated version.
             li Ehcache
               span.badge.rounded-pill.bg-success Novice
             li Quartz
+              span.badge.rounded-pill.bg-success Novice
+            li Guava
+              span.badge.rounded-pill.bg-warning.text-dark Good 
+            li GSON
+              span.badge.rounded-pill.bg-success Novice
+            li Thymeleaf
               span.badge.rounded-pill.bg-success Novice
 .row
   .col-md-12
