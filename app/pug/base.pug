@@ -1,5 +1,3 @@
-include ./header
-include ./navbar
 include ./footer
 doctype html
 html(lang='en')
@@ -34,7 +32,8 @@ html(lang='en')
 
   body
     
-    +navbar
+    include ./header.pug
+
     .container
       block content
 
