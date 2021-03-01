@@ -1,5 +1,5 @@
 extends ./base.pug
-include ./history
+include ./experience
 include ./vcard
 include ./portfolio
 include ./volunteer
@@ -55,7 +55,7 @@ block content
       include ./skills.pug
     .tab-pane(id="experience" role="tabpanel" aria-labelledby="experience-tab")
       h3.text-center Experience
-      +history
+      +experience
     .tab-pane(id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab")
       h3.text-center Portfolio
       +portfolio
