@@ -119,4 +119,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"WdKE":[function(require,module,exports) {
 "use strict";require("bootstrap"),require("../sass/custom.scss");
 },{"bootstrap":"emzB","../sass/custom.scss":"hfIV"}]},{},["WdKE"], null)
-//# sourceMappingURL=main.962b60f4.js.map
+//# sourceMappingURL=main.81e25e41.js.map
