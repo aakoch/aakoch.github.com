@@ -217,3 +217,25 @@ dt
   
 .award, .awards, .awards > p, .awards > .award > p
   padding-left: 1em
+
+.novice:hover::after
+  @extend .badge
+  @extend .rounded-pill
+  @extend .bg-success
+  margin-left: 1em
+  content: "Novice"
+
+.good:hover::after
+  @extend .badge
+  @extend .rounded-pill
+  @extend .bg-warning
+  @extend .text-dark
+  margin-left: 1em
+  content: "Good"
+
+.pro:hover::after
+  @extend .badge
+  @extend .rounded-pill
+  @extend .bg-danger
+  margin-left: 1em
+  content: "Pro"
