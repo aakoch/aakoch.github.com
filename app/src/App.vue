@@ -1,0 +1,80 @@
+<template lang="pug">
+include ../pug/experience
+include ../pug/vcard
+include ../pug/portfolio
+include ../pug/volunteer
+
+include ../pug/header.pug
+
+block content
+  .container
+    .tab-content
+      .tab-pane.active(id="home" role="tabpanel" aria-labelledby="home-tab")
+        .row
+          .col-12
+            div.intro.shadow
+              p Software engineer with over 20 years of professional experience.
+              p Passionate about software maintainability through proven design patterns and clean code.
+            
+            h3.text-center Areas of Expertise
+
+            img.img-fluid(src="../assets/images/wordcloud.png" width="500" style="float:right")
+            
+            h4 Back-end
+            p Designed and developed server-side Java applications ranging from ReSTful services, business layers and data access layers via JMS and databases using:
+            ul
+              li Java intensively but knowledgable in PHP, Python and more
+              li Frameworks including Spring, Hibernate, MyBatis and more
+              li Database design using Oracle, MySQL, SQL Server and PostgreSQL
+              li Experienced with containers Tomcat, Weblogic, Oracle Portal, Liferay
+            h4 Front-end
+            p Designed and developed responsive applications for both mobile and desktop using:
+            ul
+              li Javascript frameworks such as Angular, jQuery, YUI, Prototype
+              li Java MVC frameworks such as Struts, Wicket, JSP, JSF, JPDK, JSTL
+              li HTML5 and CSS3 responsive design
+            h4 Application Lifecycle and Continuous Integration
+            p Experienced in the full software lifecycle from requirements gathering to production support using:
+            ul
+              li Source control using Git, Subversion and Source Integrity
+              li Build and continuous integration tools Jenkins, Puppet, NodeJS, Gradle, Maven, Grunt, etc.
+              li Testing frameworks and tools including JUnit, Jasmine, Selenium, Cucumber, JSUnit, JProfiler
+              li Code analysis using Crucible, SonarQube, FOSSA, Blackduck and Fortify
+              li Support tools AppDynamics, Sitescope, Grafana, Dynatrace, VisualVM
+              li Project management tools such as Jira, VersionOne and MS Project
+
+          //- .col-md-4
+          //-   quote “We must be willing to let go of the life we planned so as to have the life that is waiting for us.” -- Joseph Campbell
+        .row
+          .col-md-8
+          .col-md-4
+            +vcard
+        .row
+          .col-md-12
+            .github-view-source-link View 
+              a(href="https://github.com/aakoch/aakoch.github.com/blob/master/app/pug/index.pug") the source
+              |  for this page!
+      .tab-pane(id="skills" role="tabpanel" aria-labelledby="skills-tab")
+        include ../pug/skills.pug
+      .tab-pane(id="experience" role="tabpanel" aria-labelledby="experience-tab")
+        h3.text-center Experience
+        +experience
+      .tab-pane(id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab")
+        h3.text-center Portfolio
+        +portfolio
+      //- .tab-pane(id="volunteer" role="tabpanel" aria-labelledby="volunteer-tab")
+      //-   h3 Volunteering
+      //-   +volunteer
+
+</template>
+
+<script>
+ export default {
+  name: "app",
+  data() {
+    return {
+      title: "Square Root Calculator",
+    };
+  },
+};
+</script>
