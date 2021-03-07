@@ -29,7 +29,7 @@
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.7",
     "parcel-bundler": "^1.12.4",
-    "pug": "^3.0.0",
+    "pug": "^3.0.1",
     "vite": "^2.0.5"
   }
 }
