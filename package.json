@@ -1,6 +1,6 @@
 {
   "name": "aakoch.github.com",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
