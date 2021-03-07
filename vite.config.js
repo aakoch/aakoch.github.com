@@ -5,9 +5,4 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   root: "app",
-  build: {
-    rollupOptions: {
-      input: "index.pug"
-    }
-  }
 })
