@@ -11,7 +11,8 @@
     "yarn": "^1.22.10"
   },
   "scripts": {
-    "dev": "vite",
+    "olddev": "vite",
+    "dev": "nuxt",
     "build": "vite build",
     "serve": "vite preview"
   },
@@ -28,8 +29,8 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.7",
-    "parcel-bundler": "^1.12.4",
-    "pug": "^3.0.1",
+    "parcel-bundler": "^1.12.5",
+    "pug": "^3.0.2",
     "sass": "^1.32.8",
     "vite": "^2.0.5"
   }
