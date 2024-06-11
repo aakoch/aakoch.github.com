@@ -28,6 +28,6 @@
   "devDependencies": {
     "@parcel/transformer-pug": "^2.7.0",
     "@parcel/transformer-sass": "^2.7.0",
-    "pug": "^3.0.2"
+    "pug": "^3.0.3"
   }
 }
